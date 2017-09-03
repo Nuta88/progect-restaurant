@@ -1,11 +1,22 @@
-<div id="myModal" class="modal fade">
+<div id="myModal" class="modal fade" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button class="close" type="button" data-dismiss="modal">×</button>
-				<h4 class="modal-title">uuuuu</h4>
+				<h4 class="modal-title">uuuuu {{userName}}</h4>
 			</div>
-			<div class="modal-body">ttttttt</div>
+			<div class="modal-body">
+				<form #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
+
+					<label for="name">Name</label> <input type="text" id="name"
+						required name="name" ngModel placeholder={{userName}}>
+					<div class="text-center">
+						<button type="submit" class="btn btn-md btn-success">update
+							dish</button>
+					</div>
+
+				</form>
+			</div>
 			<div class="modal-footer">
 				<button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button>
 			</div>

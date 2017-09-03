@@ -1,0 +1,15 @@
+::-webkit-input-placeholder {
+	text-transform: lowercase;
+}
+
+::-moz-placeholder {
+	text-transform: lowercase;
+}
+
+:-moz-placeholder {
+	text-transform: lowercase;
+}
+
+:-ms-input-placeholder {
+	text-transform: lowercase;
+}

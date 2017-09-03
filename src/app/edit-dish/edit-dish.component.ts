@@ -10,6 +10,10 @@ import {Observable} from 'rxjs';
   styleUrls: ['./edit-dish.component.css']
 })
 export class EditDishComponent implements OnInit {
+  
+  name:string="Tom";
+  
+  modalWindow(dish): any {this.name=dish.name;}
 
   dishes: Dish[];
   constructor(private dishService: DishService) {}
