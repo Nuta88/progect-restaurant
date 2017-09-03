@@ -1,0 +1,14 @@
+.top-bar {
+	position: fixed;
+	width: 100%;
+	top: -1px;
+}
+
+.logo {
+	height: 70%;
+	padding: 10px;
+}
+
+ul, ol, dl {
+	list-style: none;
+}

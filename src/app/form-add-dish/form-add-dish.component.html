@@ -1,0 +1,22 @@
+<div id="dish" class="grid-container fluid">
+	<h2>add dishes</h2>
+	<div class=" grid-container fluid grid-x dishCenter">
+		<div class="cell small-4 text-center">
+			<form #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
+
+				<label for="name">Name</label> <input type="text" id="name" required
+					name="name" ngModel> <label for="imgURL">imgURL</label> <input
+					type="text" id="imgURL" required name="imgURL" ngModel>
+				<div class="text-center">
+					<button type="submit" class="btn btn-md btn-success">Add
+						dish</button>
+				</div>
+
+			</form>
+		</div>
+
+
+	</div>
+</div>
+
+
