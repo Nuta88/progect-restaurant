@@ -3,23 +3,33 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button class="close" type="button" data-dismiss="modal">×</button>
-				<h4 class="modal-title">Update name: {{dishName.id}}</h4>
+				<h4 class="modal-title">Update name: {{dishName.name}}</h4>
 			</div>
 			<div class="modal-body">
-				<form  #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
+				<form #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
 
-					<label for="id">Name</label> <input type="text" id={{dishName.id}}
-						required name="id" [(ngModel)]="dishName.id" placeholder={{dishName.id}}>
+					<label for="name">Name</label> <input type="text"
+						id={{dishName.id}} required name="name"
+						[(ngModel)]="dishName.name" placeholder={{dishName.name}}>
 
-					<label for="name">Name</label> <input type="text" id={{dishName.id}}
-						required name="name" [(ngModel)]="dishName.name" placeholder={{dishName.name}}>
+					<label for="id" class="none">Name</label> <input class="none"
+						type="text" id={{dishName.id}} required name="id"
+						[(ngModel)]="dishName.id" placeholder={{dishName.id}}> <label
+						for="imgURL" class="none">imgURL</label> <input class="none"
+						type="text" id="imgURL" required name="imgURL"
+						[(ngModel)]="dishName.imgURL" placeholder={{dishName.imgURL}}>
+					<label for="price" class="none">imgURL</label> <input class="none"
+						type="text" id="price" required name="price"
+						[(ngModel)]="dishName.price" placeholder={{dishName.price}}>
+
+
 
 					<div class="text-center">
 						<button type="submit" class="btn btn-md btn-success">update
 							dish</button>
 					</div>
-					
-					
+
+
 
 				</form>
 			</div>

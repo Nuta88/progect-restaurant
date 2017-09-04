@@ -9,7 +9,8 @@ import {Dish} from '../dish';
 export class ModalWindowComponent {
   constructor() { }
 
-   @Input() dishName: string;
+   @Input() dishName: Dish;
+  
   
     @Output() onChanged = new EventEmitter<any>();
   onSubmit(form) {

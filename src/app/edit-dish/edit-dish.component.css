@@ -18,11 +18,12 @@ h2 {
 	margin-bottom: 40px;
 }
 
+h3{font-weight: bold;}
+
 img {
 	width: 300px;
 	height: 200px;
 }
-
 
 ::-webkit-input-placeholder {
 	text-transform: uppercase;
@@ -42,4 +43,8 @@ img {
 :-ms-input-placeholder {
 	text-transform: uppercase;
 	color: black;
+}
+
+.price {
+	margin-bottom: 10px;
 }

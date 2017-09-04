@@ -8,7 +8,10 @@
 	<div class=" grid-container fluid grid-x dishCenter">
 		<div class="cell small-4 text-center" *ngFor="let dish of dishes">
 			<img src={{dish.imgURL}} alt="image1" />
-			<h3 class="nameDish text-center">{{dish.name}}</h3>
+				<div class="grid-x text-center">
+  <div class="small-6 cell text-center"><h3 class="nameDish text-center">{{dish.name}}</h3></div>
+  <div class="small-6 cell text-center">{{dish.price}}$</div>
+</div>
 		</div>
 	</div>
 </div>

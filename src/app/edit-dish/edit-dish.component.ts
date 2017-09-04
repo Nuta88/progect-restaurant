@@ -36,7 +36,7 @@ export class EditDishComponent implements OnInit {
   }
   
   goBack(): void {
-    this.location.back();
+   this.location.forward();
   }
 
 
