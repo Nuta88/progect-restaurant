@@ -17,7 +17,7 @@ export class EditDishComponent implements OnInit {
   
   modalWindow(dish): any {this.name=dish}
 
-  dishes: Dish[];
+  dishes: Dish[]; 
   
   
   constructor(private dishService: DishService, private location: Location) {}
