@@ -3,22 +3,28 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button class="close" type="button" data-dismiss="modal">×</button>
-				<h4 class="modal-title">uuuuu {{userName}}</h4>
+				<h4 class="modal-title">Update name: {{dishName.id}}</h4>
 			</div>
 			<div class="modal-body">
-				<form #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
+				<form  #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
 
-					<label for="name">Name</label> <input type="text" id="name"
-						required name="name" ngModel placeholder={{userName}}>
+					<label for="id">Name</label> <input type="text" id={{dishName.id}}
+						required name="id" [(ngModel)]="dishName.id" placeholder={{dishName.id}}>
+
+					<label for="name">Name</label> <input type="text" id={{dishName.id}}
+						required name="name" [(ngModel)]="dishName.name" placeholder={{dishName.name}}>
+
 					<div class="text-center">
 						<button type="submit" class="btn btn-md btn-success">update
 							dish</button>
 					</div>
+					
+					
 
 				</form>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button>
+				<button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>

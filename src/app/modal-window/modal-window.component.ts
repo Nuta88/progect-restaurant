@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import {Dish} from '../dish';
 
 @Component({
@@ -6,11 +6,14 @@ import {Dish} from '../dish';
   templateUrl: './modal-window.component.html',
   styleUrls: ['./modal-window.component.css']
 })
-export class ModalWindowComponent implements OnInit {
+export class ModalWindowComponent {
   constructor() { }
 
-   @Input() userName: string;
-  ngOnInit() {
+   @Input() dishName: string;
+  
+    @Output() onChanged = new EventEmitter<any>();
+  onSubmit(form) {
+    this.onChanged.emit(form);
   }
 
 }

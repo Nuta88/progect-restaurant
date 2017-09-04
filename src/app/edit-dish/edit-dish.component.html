@@ -1,5 +1,5 @@
 <div class="grid-container fluid dishes">
-	<app-modal-window [userName]="name"></app-modal-window>
+	<app-modal-window [dishName]="name" (onChanged)="onChanged($event)"></app-modal-window>
 </div>
 
 <div id="dish" class="grid-container fluid dishes">

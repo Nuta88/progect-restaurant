@@ -18,12 +18,8 @@ export class AppComponent implements OnInit {
 
   constructor(private dishService: DishService) {}
 
-  getDishes(): void {
-    this.dishService.getDishes().then(dishes => this.dishes = dishes);
-  }
-
   ngOnInit(): void {
-    this.getDishes();
+    this.dishService.getDishes().then(dishes => this.dishes = dishes);
   }
 
   onSelect(dish: Dish): void {

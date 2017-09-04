@@ -1,5 +1,5 @@
 export class Dish {
-  id: number;
+  id: string;
   name: string;
   imgURL: string;
 }

@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Headers, Http, RequestOptions} from '@angular/http';
+import {Headers, Http} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 import {Dish} from './dish';
@@ -21,14 +21,13 @@ export class DishService {
       .catch(this.handleError);
   }
 
-  delete(id: number): Promise<void> {
+  delete(id: string): Promise<void> {
     const url = `${this.dishesUrl}/${id}`;
     return this.http.delete(url, {headers: this.headers})
       .toPromise()
       .then(() => null)
       .catch(this.handleError);
-  }
-  
+  } 
 
   create(form: any): Promise<Dish> {
     return this.http
@@ -37,6 +36,16 @@ export class DishService {
       .then(res => res.json().data as Dish)
       .catch(this.handleError);
   }
+  
+  
+  update(form: any): Promise<Dish> {
+  const url =  `${this.dishesUrl}/${form.id}`;
+  return this.http
+    .put(url, JSON.stringify(form), {headers: this.headers})
+    .toPromise()
+    .then(() => form)
+    .catch(this.handleError);
+}
 
 
   private handleError(error: any): Promise<any> {

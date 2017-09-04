@@ -1,15 +1,19 @@
 ::-webkit-input-placeholder {
-	text-transform: lowercase;
+	text-transform: uppercase;
+	color: black;
 }
 
 ::-moz-placeholder {
-	text-transform: lowercase;
+	text-transform: uppercase;
+	color: black;
 }
 
 :-moz-placeholder {
-	text-transform: lowercase;
+	text-transform: uppercase;
+	color: black;
 }
 
 :-ms-input-placeholder {
-	text-transform: lowercase;
+	text-transform: uppercase;
+	color: black;
 }
