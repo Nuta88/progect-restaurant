@@ -6,6 +6,10 @@ import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {InMemoryDataService} from './in-memory-data.service';
 import {NgForm} from '@angular/forms';
 import { ReactiveFormsModule }   from '@angular/forms';
+import {AccordionModule} from 'primeng/primeng';
+import {CalendarModule} from 'primeng/primeng';
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppComponent} from './app.component';
 import {HttpModule} from '@angular/http';
@@ -30,7 +34,8 @@ import {ModalWindowComponent} from './modal-window/modal-window.component';
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
-    AppRoutingModule, ReactiveFormsModule
+    AppRoutingModule, ReactiveFormsModule,
+        BrowserAnimationsModule, CalendarModule
   ],
   providers: [
     DishService],
