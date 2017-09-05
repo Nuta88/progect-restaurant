@@ -23,8 +23,6 @@ export class ModalWindowComponent {
     this.onChanged.emit(form);
     console.log(form.name);
     this.closeModal();
-    
-    //this.closeModal = false;
   }
 
 

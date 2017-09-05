@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import { Location }                 from '@angular/common';
-import { NgForm } from '@angular/forms';
+import {Location} from '@angular/common';
+import {NgForm} from '@angular/forms';
 
 import {DishService} from '../dish.service';
 import {Dish} from '../dish';
@@ -12,14 +12,14 @@ import {Observable} from 'rxjs';
   styleUrls: ['./edit-dish.component.css']
 })
 export class EditDishComponent implements OnInit {
-  
-  name={};
-  
-  modalWindow(dish): any {this.name=dish}
 
-  dishes: Dish[]; 
-  
-  
+  name = {};
+
+  modalWindow(dish): any {this.name = dish}
+
+  dishes: Dish[];
+
+
   constructor(private dishService: DishService, private location: Location) {}
 
   delete(dish: Dish): void {
@@ -29,13 +29,13 @@ export class EditDishComponent implements OnInit {
         this.dishes = this.dishes.filter(h => h !== dish);
       });
   }
-  
-    onChanged(form) {
+
+  onChanged(form) {
     this.dishService.update(form)
   }
-  
+
   goBack(): void {
-   this.location.forward();
+    this.location.forward();
   }
 
 
