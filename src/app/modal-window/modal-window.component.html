@@ -1,17 +1,14 @@
-<div id="myModal" class="modal fade" tabindex="-1">
+<div id="myModal" class="modal fade" tabindex="-1"> <!--  *ngIf="closeModal" -->
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button class="close" type="button" data-dismiss="modal">×</button>
 				<h4 class="modal-title">Update name: {{dishName.name}}</h4>
 			</div>
 			<div class="modal-body">
 				<form #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
-
 					<label for="name">Name</label> <input type="text"
 						id={{dishName.id}} required name="name"
 						[(ngModel)]="dishName.name" placeholder={{dishName.name}}>
-
 					<label for="id" class="none">Name</label> <input class="none"
 						type="text" id={{dishName.id}} required name="id"
 						[(ngModel)]="dishName.id" placeholder={{dishName.id}}> <label
@@ -34,7 +31,7 @@
 				</form>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+				<button class="btn btn-default" type="button" data-dismiss="modal" #closeBtn>Close</button>
 			</div>
 		</div>
 	</div>

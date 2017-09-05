@@ -32,7 +32,6 @@ export class EditDishComponent implements OnInit {
   
     onChanged(form) {
     this.dishService.update(form)
-       .then(() => this.goBack());
   }
   
   goBack(): void {
