@@ -1,14 +1,27 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-.dishes, fieldset{margin-top: 90px; margin-bottom: 140px;}
+.dishes, fieldset {
+	margin-top: 90px;
+	margin-bottom: 140px;
+}
 
-.nameDish::first-letter {text-transform: capitalize;}
+.nameDish::first-letter {
+	text-transform: capitalize;
+}
 
-div .small-4 {margin-bottom: 60px; }
+div .small-4 {
+	margin-bottom: 60px;
+}
 
-h2{
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 40px;
-  }
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 40px;
+}
 
+input.ng-touched.ng-invalid {
+	border: solid red 2px;
+}
+
+input.ng-touched.ng-valid {
+	border: solid green 2px;
+}

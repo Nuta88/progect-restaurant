@@ -2,22 +2,38 @@
 	<h2>add dishes</h2>
 	<div class=" grid-container fluid grid-x dishCenter">
 		<div class="cell small-4 text-center">
-			<form #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
+			<form [formGroup]="myForm" novalidate #f="ngForm"
+				(ngSubmit)="onSubmit(f.value); f.value=''">
+				<div class="form-group">
+					<label for="name">Name</label> <input type="text" id="name"
+						class="form-control" formControlName="name" name="name" ngModel>
 
-				<label for="name">Name</label> <input type="text" id="name" required
-					name="name" ngModel> 
-					<label for="imgURL">imgURL</label> <input
-					type="text" id="imgURL" required name="imgURL" ngModel>
-					 <label for="price">Price</label> <input type="number" id="price" required
-					name="price" ngModel>
+					<div class="alert alert-danger"
+						*ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched">
+						Incorrect name</div>
+				</div>
 
+				<div class="form-group">
+					<label for="imgURL">imgURL</label> <input type="url" id="imgURL"
+						required name="imgURL" ngModel class="form-control"
+						formControlName="imgURL">
+					<div class="alert alert-danger"
+						*ngIf="myForm.controls['imgURL'].invalid && myForm.controls['imgURL'].touched">
+						Incorrect URL</div>
+				</div>
 
-
-
+				<div class="form-group">
+					<label for="price">Price</label> <input type="number" id="price"
+						required name="price" ngModel class="form-control"
+						formControlName="price">
+					<div class="alert alert-danger"
+						*ngIf="myForm.controls['price'].invalid && myForm.controls['price'].touched">
+						Missing price</div>
+				</div>
 
 				<div class="text-center">
-					<button type="submit" class="btn btn-md btn-success">Add
-						dish</button>
+					<button type="submit" class="btn btn-md btn-success"
+						[disabled]="myForm.invalid">Add dish</button>
 				</div>
 
 			</form>
