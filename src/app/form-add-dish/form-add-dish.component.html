@@ -5,8 +5,16 @@
 			<form #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
 
 				<label for="name">Name</label> <input type="text" id="name" required
-					name="name" ngModel> <label for="imgURL">imgURL</label> <input
+					name="name" ngModel> 
+					<label for="imgURL">imgURL</label> <input
 					type="text" id="imgURL" required name="imgURL" ngModel>
+					 <label for="price">Price</label> <input type="number" id="price" required
+					name="price" ngModel>
+
+
+
+
+
 				<div class="text-center">
 					<button type="submit" class="btn btn-md btn-success">Add
 						dish</button>

@@ -20,7 +20,7 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_modules/foundation-sites/dist/css/foundation.css", "../node_modules/bootstrap/dist/css/bootstrap.css"
+        "../node_modules/foundation-sites/dist/css/foundation.css", "../node_modules/bootstrap/dist/css/bootstrap.css, node-sass src/unicorn-app-theme.scss dist/unicorn-app-theme.css"
       ],
       "scripts": ["../node_modules/jquery/dist/jquery.js", "../node_modules/foundation-sites/dist/js/foundation.js", "../node_modules/bootstrap/dist/js/bootstrap.js"],
       "environmentSource": "environments/environment.ts",

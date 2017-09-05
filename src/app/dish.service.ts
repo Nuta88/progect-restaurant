@@ -37,7 +37,7 @@ export class DishService {
 
   create(form: any): Promise<Dish> {
     return this.http
-      .post(this.dishesUrl, JSON.stringify({name: form.name, imgURL: form.imgURL}), {headers: this.headers})
+      .post(this.dishesUrl, JSON.stringify({name: form.name, imgURL: form.imgURL, price: form.price}), {headers: this.headers})
       .toPromise()
       .then(res => res.json().data as Dish)
       .catch(this.handleError);

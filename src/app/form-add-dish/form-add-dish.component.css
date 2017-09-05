@@ -1,5 +1,4 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
 .dishes, fieldset{margin-top: 90px; margin-bottom: 140px;}
 
 .nameDish::first-letter {text-transform: capitalize;}

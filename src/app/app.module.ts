@@ -6,7 +6,7 @@ import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {InMemoryDataService} from './in-memory-data.service';
 import {NgForm} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdDatepickerIntl} from '@angular/material';
+import {MdButtonModule, MdDatepickerModule, MdNativeDateModule} from '@angular/material';
 
 import {AppComponent} from './app.component';
 import {HttpModule} from '@angular/http';
@@ -24,7 +24,7 @@ import {ModalWindowComponent} from './modal-window/modal-window.component';
     EditDishComponent,
     EditDishPriceComponent,
     FormAddDishComponent,
-    ModalWindowComponent
+    ModalWindowComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,9 +32,10 @@ import {ModalWindowComponent} from './modal-window/modal-window.component';
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule,
-    BrowserAnimationsModule, MdButtonModule, MdDatepickerIntl
+    BrowserAnimationsModule, MdButtonModule, MdDatepickerModule, MdNativeDateModule
   ],
-  providers: [DishService],
+  providers: [
+    DishService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
