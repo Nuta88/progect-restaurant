@@ -13,8 +13,6 @@ import {Dish} from '../dish';
 export class AddDishComponent implements OnInit {
   dishes: Dish[];
   constructor(private dishService: DishService) {}
-  date1: Date;
-   date2: Date;
 
   onChanged(form): void {
     this.dishService.create(form)

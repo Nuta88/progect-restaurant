@@ -1,24 +1,17 @@
 <div class="grid-container fluid dishes">
 	<app-form-add-dish (onChanged)="onChanged($event)"></app-form-add-dish>
 </div>
-
-<div>
-	<p-calendar [(ngModel)]="date1"></p-calendar>
-	{{date1|date}}
-</div>
-<div>
-	<p-calendar [(ngModel)]="date2"></p-calendar>
-	{{date2|date}}
-</div>
 <div id="dish" class="grid-container fluid">
 	<h2>dishes</h2>
 	<div class=" grid-container fluid grid-x dishCenter">
 		<div class="cell small-4 text-center" *ngFor="let dish of dishes">
+			<h3 class="nameDish text-center">{{dish.name}}</h3>
 			<img src={{dish.imgURL}} alt="image1" />
-				<div class="grid-x text-center">
-  <div class="small-6 cell text-center"><h3 class="nameDish text-center">{{dish.name}}</h3></div>
-  <div class="small-6 cell text-center">{{dish.price}}$</div>
-</div>
+			<div class="text-center">
+				<span>Date: </span>{{dish.calendar1}} <span> - </span>
+				{{dish.calendar2}} <span>Price: </span>{{dish.price}}$
+			</div>
+
 		</div>
 	</div>
 </div>

@@ -13,7 +13,11 @@ import {Dish} from '../dish';
   styleUrls: ['./form-add-dish.component.css']
 })
 export class FormAddDishComponent {
+
   myForm: FormGroup;
+  date1: Date;
+  date2: Date;
+selectDate(date){ this.date2 = date; console.log(this.date2.getDate());}
 
 
   constructor() {
@@ -30,9 +34,19 @@ export class FormAddDishComponent {
       "price": new FormControl(0, [
         Validators.required,
         Validators.pattern("^[ 0-9]+$")
-      ])
+      ]),
+      "calendar1": new FormControl("",
+        Validators.required),
+      "calendar2": new FormControl("",
+        Validators.required),
     });
   }
+
+  ngAfterViewInit() {
+    this.myForm.get('calendar1').setValue(this.date1);
+    this.myForm.get('calendar2').setValue(this.date2);
+  }
+
 
   @Output() onChanged = new EventEmitter<any>();
   onSubmit(form) {

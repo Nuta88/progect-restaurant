@@ -1,4 +1,4 @@
-import { Component, ViewChild, EventEmitter, Input, Output, ElementRef } from '@angular/core';
+import {Component, ViewChild, EventEmitter, Input, Output, ElementRef} from '@angular/core';
 import {Dish} from '../dish';
 
 @Component({
@@ -7,18 +7,18 @@ import {Dish} from '../dish';
   styleUrls: ['./modal-window.component.css']
 })
 export class ModalWindowComponent {
-  constructor() { }
+  constructor() {}
 
-   @Input() dishName: Dish;
-  
+  @Input() dishName: Dish;
+
   @ViewChild('closeBtn') closeBtn: ElementRef;
-  
-  private closeModal(): void {
-        this.closeBtn.nativeElement.click();
-    }
 
-  
-    @Output() onChanged = new EventEmitter<any>();
+  private closeModal(): void {
+    this.closeBtn.nativeElement.click();
+  }
+
+
+  @Output() onChanged = new EventEmitter<any>();
   onSubmit(form) {
     this.onChanged.emit(form);
     console.log(form.name);

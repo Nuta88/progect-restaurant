@@ -3,4 +3,6 @@ export class Dish {
   name: string;
   imgURL: string;
   price: number;
+  calendar1: string;
+  calendar2: string;
 }
