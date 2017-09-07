@@ -34,16 +34,20 @@
 
 				<div class="grid-x text-center form-group">
 					<div class="small-6 cell text-center">
-						<p-calendar [(ngModel)]="date1" formControlName="calendar1" dateFormat="dd.mm.y" dataType="string"
-							(onSelect)="selectDate($event)"></p-calendar>
+						<p-calendar [(ngModel)]="date1" formControlName="calendar1"
+							dateFormat="dd.mm.yy" dataType="string" [minDate]="minDate"
+							(onSelect)="selectDate($event)" [locale]="en"></p-calendar>
 					</div>
 					<div class="small-6 cell text-center">
-						<p-calendar [(ngModel)]="date2" formControlName="calendar2" dateFormat="dd.mm.y"
-							 tabindex="1" [disabledDays]="[1,2,3,4,5,6]" readonlyInput="readonlyInput" dataType="string"></p-calendar>
+
+						<input type="text" id="calendar2" class="form-control"
+							formControlName="name" name="calendar2" [(ngModel)]="date2"
+							formControlName="calendar2">
+
+						<!-- <p-calendar [(ngModel)]="date2" formControlName="calendar2" dateFormat="dd.mm.yy"
+							 tabindex="0" [disabledDays]="[0,1,2,3,4,5,6]" readonlyInput="readonlyInput" dataType="string"></p-calendar> -->
 					</div>
 				</div>
-
-
 
 				<div class="text-center">
 					<button type="submit" class="btn btn-md btn-success"
