@@ -10,15 +10,25 @@
 			</div>
 			<div class="small-9 columns">
 				<div class="input-group">
-					<span class="input-group-label"> <i class="fa fa-pencil"></i>
+					<span class="input-group-label"> <i class="fa fa-coffee"></i>
 					</span> <input type="text" id="name"
 						class="input-group-field form-control" formControlName="name"
 						name="name" ngModel>
 				</div>
+				<div >
+					<div data-closable class="alert-box callout alert" style="z-index: 10098 !important;"
+						*ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched">
+						<div class="text-left">
+							<i class="fa fa-ban"></i> Incorrect name. Please try again.
+						</div>
 
-				<div class="alert alert-danger"
-					*ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched">
-					Incorrect name</div>
+						<button class="close-button" aria-label="Dismiss alert"
+							type="button" data-close>
+							<span aria-hidden="true">x</span>
+						</button>
+					</div>
+				</div>
+
 			</div>
 		</div>
 
@@ -34,7 +44,7 @@
 						class="input-group-field form-control" formControlName="imgURL">
 				</div>
 
-				<div class="alert alert-danger"
+				<div class="alert alert-danger" style="z-index: 10098 !important;"
 					*ngIf="myForm.controls['imgURL'].invalid && myForm.controls['imgURL'].touched">
 					Incorrect URL</div>
 			</div>
@@ -61,20 +71,26 @@
 		</div>
 		<div class="row">
 			<div class="small-6 columns">
-				<p-calendar [(ngModel)]="date1" class="input-group-field"
-					formControlName="calendar1" dateFormat="dd.mm.yy" dataType="string"
-					[minDate]="minDate" (onSelect)="selectDate($event)" [locale]="en"
+
+
+
+				<p-calendar [(ngModel)]="date1" formControlName="calendar1"
+					dateFormat="dd.mm.yy" dataType="string"
+					inputStyleClass="form-control" [minDate]="minDate"
+					(onSelect)="selectDate($event)" [locale]="en"
 					placeholder="Date from"></p-calendar>
+
+
 			</div>
 
 
 			<div class="small-6 columns">
 				<div class="input-group">
 					<span class="input-group-label"> <i class="fa fa-calendar"></i>
-					</span> <input type="text" id="calendar2" class="form-control"
-						formControlName="name" name="calendar2" [(ngModel)]="date2"
-						formControlName="calendar2" class="input-group-field form-control"
-						placeholder="Date to" class="input-group-field form-control">
+					</span> <input type="text" id="calendar2" name="calendar2"
+						[(ngModel)]="date2" formControlName="calendar2"
+						class="input-group-field form-control" placeholder="Date to"
+						class="input-group-field form-control">
 				</div>
 
 

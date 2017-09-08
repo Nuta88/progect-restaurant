@@ -19,6 +19,16 @@
 					<label for="price" class="none">imgURL</label> <input class="none"
 						type="text" id="price" required name="price"
 						[(ngModel)]="dishName.price" placeholder={{dishName.price}}>
+						
+						
+						
+						<p-calendar [(ngModel)]="dishName.calendar1" id="calendar1" name="calendar1" class="none"
+					dateFormat="dd.mm.yy" dataType="string" placeholder="Date from"></p-calendar>
+					
+					<input type="text" id="calendar2" class="none"
+						 name="calendar2" [(ngModel)]="dishName.calendar2">
+					
+					
 
 
 

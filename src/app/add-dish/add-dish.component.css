@@ -1,13 +1,13 @@
-.dishes, fieldset {
+.dishes {
 	margin-top: 90px;
-	margin-bottom: 140px;
+	margin-bottom: 60px;
 }
 
 .nameDish::first-letter {
 	text-transform: capitalize;
 }
 
-.dishBord {box-shadow: 0 0 10px rgba(0,0,0,0.5); margin: 20px;}
+.dishBord {box-shadow: 0 0 10px rgba(0,0,0,0.5); margin: 3px;}
 
 
 h2 {
@@ -22,11 +22,12 @@ img {
 	height: 200px;
 }
 
-h3 {
+h5 {
 	font-weight: bold;
 }
-span {font-weight: bold;}
+.conteinerDishes {margin-bottom: 20px;}
+.noMargin{margin: 0; padding: 0;}
 
-.dishinforc {background-color: rgb( 196, 239, 221);}
+.captionDishes{background-color: rgb(  31, 97, 141 ); color: white;}
 
-.clendar {margin-bottom: 10px;}
+
