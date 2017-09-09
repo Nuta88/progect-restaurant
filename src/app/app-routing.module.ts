@@ -11,15 +11,15 @@ const routes: Routes = [  {
     pathMatch: 'full'
   },
   {
-    path: 'addDish',
+    path: 'add-dish',
     component: AddDishComponent
   },
   {
-    path: 'editDish',
+    path: 'edit-dish',
     component: EditDishComponent
   },
   {
-    path: 'editDishPrice',
+    path: 'edit-dish-price',
     component: EditDishPriceComponent
   }
 ];

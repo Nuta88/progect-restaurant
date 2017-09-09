@@ -1,14 +1,11 @@
-.dishes {
-	margin-top: 90px;
-	margin-bottom: 60px;
-}
-
 .nameDish::first-letter {
 	text-transform: capitalize;
 }
 
-.dishBord {box-shadow: 0 0 10px rgba(0,0,0,0.5); margin: 3px;}
-
+.dishBord {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	margin: 3px;
+}
 
 h2 {
 	text-align: center;
@@ -25,9 +22,26 @@ img {
 h5 {
 	font-weight: bold;
 }
-.conteinerDishes {margin-bottom: 20px;}
-.noMargin{margin: 0; padding: 0;}
 
-.captionDishes{background-color: rgb(  31, 97, 141 ); color: white;}
+.conteinerDishes {
+	margin-bottom: 20px; 
+}
 
+.noMargin {
+	margin: 0;
+	padding: 0;
+}
 
+.captionDishes {
+	background-color: rgb(31, 97, 141);
+	color: white;
+}
+
+.bgDishes {
+	background-color: rgba(44, 56, 64, .1);
+	box-shadow: 4px 0 12px rgba(0,0,0,0.5),  -4px 0 12px rgba(0,0,0,0.5); 
+	padding: 10px;
+}
+.dishes {
+	padding: 100px 10px 10px 60px;
+}

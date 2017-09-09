@@ -1,5 +1,3 @@
-
-
 <form [formGroup]="myForm" novalidate #f="ngForm"
 	(ngSubmit)="onSubmit(f.value); f.value='';myForm.reset();">
 
@@ -11,20 +9,19 @@
 			<div class="small-9 columns">
 				<div class="input-group">
 					<span class="input-group-label"> <i class="fa fa-coffee"></i>
-					</span> <input type="text" id="name"
-						class="input-group-field form-control" formControlName="name"
-						name="name" ngModel>
+					</span> <input type="text" id="name" class="input-group-field"
+						formControlName="name" name="name" ngModel>
 				</div>
-				<div >
-					<div data-closable class="alert-box callout alert" style="z-index: 10098 !important;"
+				<div>
+					<div data-closable class="alert-box callout alert"
 						*ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched">
-						<div class="text-left">
+						<div class="text-left messeng">
 							<i class="fa fa-ban"></i> Incorrect name. Please try again.
 						</div>
 
 						<button class="close-button" aria-label="Dismiss alert"
 							type="button" data-close>
-							<span aria-hidden="true">x</span>
+							<span aria-hidden="true" class="cloesMesseng">x</span>
 						</button>
 					</div>
 				</div>
@@ -36,17 +33,25 @@
 			<div class="small-3 columns">
 				<label for="url" class="middle">URL</label>
 			</div>
-			<div class="small-9 columns">
 
+			<div class="small-9 columns">
 				<div class="input-group">
 					<span class="input-group-label"> <i class="fa fa-photo"></i>
 					</span> <input type="url" id="imgURL" required name="imgURL" ngModel
-						class="input-group-field form-control" formControlName="imgURL">
+						class="input-group-field" formControlName="imgURL">
 				</div>
 
-				<div class="alert alert-danger" style="z-index: 10098 !important;"
+				<div data-closable class="alert-box callout alert"
 					*ngIf="myForm.controls['imgURL'].invalid && myForm.controls['imgURL'].touched">
-					Incorrect URL</div>
+					<div class="text-left messeng">
+						<i class="fa fa-ban"></i> Incorrect url. Please try again.
+					</div>
+
+					<button class="close-button" aria-label="Dismiss alert"
+						type="button" data-close>
+						<span aria-hidden="true" class="cloesMesseng">x</span>
+					</button>
+				</div>
 			</div>
 		</div>
 
@@ -58,12 +63,22 @@
 				<div class="input-group">
 					<span class="input-group-label"> <i class="fa fa-dollar"></i>
 					</span> <input type="number" id="price" required name="price" ngModel
-						class="input-group-field form-control" formControlName="price">
+						class="input-group-field" formControlName="price">
 				</div>
-				<div class="alert alert-danger"
+
+				<div data-closable class="alert-box callout alert"
 					*ngIf="myForm.controls['price'].invalid && myForm.controls['price'].touched">
-					Missing price</div>
+					<div class="text-left messeng">
+						<i class="fa fa-ban"></i> Incorrect price. Please try again.
+					</div>
+
+					<button class="close-button" aria-label="Dismiss alert"
+						type="button" data-close>
+						<span aria-hidden="true" class="cloesMesseng">x</span>
+					</button>
+				</div>
 			</div>
+
 		</div>
 
 		<div class="row">
@@ -71,43 +86,36 @@
 		</div>
 		<div class="row">
 			<div class="small-6 columns">
-
-
-
-				<p-calendar [(ngModel)]="date1" formControlName="calendar1"
-					dateFormat="dd.mm.yy" dataType="string"
-					inputStyleClass="form-control" [minDate]="minDate"
-					(onSelect)="selectDate($event)" [locale]="en"
-					placeholder="Date from"></p-calendar>
-
-
+				<div class="input-group">
+					<span class="input-group-label"> <i class="fa fa-calendar"></i>
+					</span>
+					<p-calendar [(ngModel)]="date1" formControlName="calendar1"
+						dateFormat="dd.mm.yy" dataType="string" [minDate]="minDate"
+						(onSelect)="selectDate($event)" [readonlyInput]="true"
+						[locale]="en" placeholder="Date from"
+						styleClass="input-group-field" inputStyleClass="form-control"
+						class="input-group-field"></p-calendar>
+				</div>
 			</div>
 
 
 			<div class="small-6 columns">
 				<div class="input-group">
 					<span class="input-group-label"> <i class="fa fa-calendar"></i>
-					</span> <input type="text" id="calendar2" name="calendar2"
+					</span> <input type="text" readonly id="calendar2" name="calendar2"
 						[(ngModel)]="date2" formControlName="calendar2"
-						class="input-group-field form-control" placeholder="Date to"
-						class="input-group-field form-control">
+						placeholder="Date to" class="input-group-field">
 				</div>
 
-
-				<!-- <p-calendar [(ngModel)]="date2" formControlName="calendar2" dateFormat="dd.mm.yy"
-							 tabindex="0" [disabledDays]="[0,1,2,3,4,5,6]" readonlyInput="readonlyInput" dataType="string"></p-calendar> -->
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="small-12 text-center nameCalendar">
+			<div class="small-12 text-center">
 				<button type="submit" class="button large expanded"
 					[disabled]="myForm.invalid">Add dish</button>
 			</div>
 		</div>
 	</div>
-
+	
 </form>
-
-
-

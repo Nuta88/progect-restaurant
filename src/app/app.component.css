@@ -3,6 +3,11 @@
 	width: 100%;
 	top: -1px;
 	 z-index: 100;
+	 
+}
+
+.top-bar, .top-bar ul {
+  background-color: rgb(44,56,64);
 }
 
 .logo {
