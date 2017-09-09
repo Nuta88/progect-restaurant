@@ -7,7 +7,7 @@
 }
 
 .top-bar, .top-bar ul {
-  background-color: rgb(44,56,64);
+  background-color: rgb(35,31,32);
 }
 
 .logo {
@@ -18,3 +18,12 @@
 ul, ol, dl {
 	list-style: none;
 }
+a {color: white; 	font-family: 'Times New Roman', Times, serif;}
+
+[routerLinkActive="active"][_ngcontent-c0]:active {
+	font-family: 'Times New Roman', Times, serif;
+    color: rgb(233, 205, 168);
+}
+
+a:hover,a:active,a:focus {color: rgb(233, 205, 168);}
+

@@ -23,8 +23,8 @@ form .form-icons {
 }
 
 form .form-icons .input-group-label {
-	background-color: rgb(44, 56, 64);
-	border-color: rgb(44, 56, 64);
+	background-color: rgb(35,31,32);
+	border-color: rgb(35,31,32);
 }
 
 form .form-icons .fa {
@@ -36,11 +36,11 @@ form .form-icons .fa {
 .button.disabled:focus,
 .button[disabled],
 .button[disabled]:hover,
-.button[disabled]:focus{background-color: rgb(44, 56, 64);}
+.button[disabled]:focus{background-color: rgb(35,31,32);}
 
 .button,
 .button:hover,
-.button:focus{background-color: rgb(44, 56, 64);}
+.button:focus{background-color: rgb(35,31,32);}
 
 .callout{position: absolute; z-index: 10098 !important;}
 .messeng {margin-right:45px; }

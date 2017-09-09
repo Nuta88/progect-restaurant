@@ -10,11 +10,14 @@
 		<div class="top-bar-left">
 			<ul class="menu">
 				<li class="logo"><img src={{urlLogo}} alt="image1" /></li>
-				<h4>Villula restaurant</h4>
 			</ul>
 		</div>
-		
-		
+		<div class="top-bar-left">
+			<ul class="menu">
+				<img src={{nameRestaurant}} alt="image1" />
+			</ul>
+		</div>
+
 		<div class="top-bar-right">
 			<ul class="menu">
 				<li><a routerLink="/add-dish" routerLinkActive="active">Add
@@ -30,6 +33,6 @@
 
 
 	<router-outlet></router-outlet>
-	
+
 	<app-restaurant-footer></app-restaurant-footer>
 </body>

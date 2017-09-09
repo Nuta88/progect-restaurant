@@ -39,7 +39,6 @@ h5 {
 
 .bgDishes {
 	background-color: rgba(44, 56, 64, .1);
-	box-shadow: 4px 0 12px rgba(0,0,0,0.5),  -4px 0 12px rgba(0,0,0,0.5); 
 	padding: 10px;
 }
 .dishes {
