@@ -13,6 +13,11 @@ import {Dish} from '../dish';
 export class AddDishComponent implements OnInit {
     menu = "assets/images/menuRestaurant.jpg";
     kitchen = "assets/images/kitchen.jpg";
+    meat = "assets/images/images.jpg";
+    wine = "assets/images/imagew1.jpg";
+    captionDishes = "assets/images/captionDishes.png";
+
+
     dishes: Dish[];
     constructor(private dishService: DishService) { }
 

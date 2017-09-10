@@ -2,21 +2,17 @@
 <div class="row dishes bgDishes">
 	<div class="medium-6 large-6 columns">
 		<div class="row small-up-2">
-			<div class="column">
-				<img class="thumbnail"
-					src={{menu}}>
+			<div class="column down">
+				<img class="thumbnail" src={{menu}}>
+			</div>
+			<div class="column down">
+				<img class="thumbnail" src={{kitchen}}>
 			</div>
 			<div class="column">
-				<img class="thumbnail"
-					src={{kitchen}}>
+				<img class="thumbnail" src={{wine}}>
 			</div>
 			<div class="column">
-				<img class="thumbnail"
-					src="https://images.template.net/wp-content/uploads/2016/04/05131347/Royal-Restaurant-Menu-Template.jpg">
-			</div>
-			<div class="column">
-				<img class="thumbnail"
-					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS92aR5WDq0K6vnPJ--HcfPdThqz7X8qHisszD5zIwtQfqEGZOL">
+				<img class="thumbnail" src={{meat}}>
 			</div>
 
 
@@ -35,27 +31,47 @@
 
 
 <div class="row small-up-3 large-up-3 bgDishes">
-<div>
-	<h2 class="captionDishes">dishes</h2>
-	<hr>
-	<div class="column text-center conteinerDishes"
+
+	<h2 class="captionDishes">
+		<img src={{captionDishes}}>
+	</h2>
+	<div class="column conteinerDishes"
 		*ngFor="let dish of dishes">
-
-		<div class=" thumbnail dishBord">
-			<h5 class="nameDish text-center">{{dish.name}}</h5>
-			<p>
-				<img class="" src={{dish.imgURL}}>
-			</p>
-
-			<p>Price: {{dish.price}}$</p>
-			<hr class="noMargin">
-			<p>Date: {{dish.calendar1}} - {{dish.calendar2}}</p>
-
+		<div class="card-user-container">
+			<div class="card-user-avatar">
+				<img src={{dish.imgURL}} alt="" class="user-image">
+			</div>
+			<div class="card-user-social">
+				<p>
+					<i class="fa fa-calendar"></i> {{dish.calendar1}} -
+					{{dish.calendar2}}
+				</p>
+			</div>
+			<div class="card-user-bio">
+				<h4 class="nameDish noMargin">{{dish.name}}</h4>
+				<p>Price: {{dish.price}}$</p>
+			</div>
 		</div>
 
-	</div></div>
 
+		<!-- <div class=" thumbnail dishBord">
+				<h5 class="nameDish text-center">{{dish.name}}</h5>
+				<p>
+					<img class="" src={{dish.imgURL}}>
+				</p>
+
+				<p>Price: {{dish.price}}$</p>
+				<hr class="noMargin">
+				<p>Date: {{dish.calendar1}} - {{dish.calendar2}}</p>
+
+			</div> -->
+
+	</div>
 </div>
+
+
+
+
 
 
 

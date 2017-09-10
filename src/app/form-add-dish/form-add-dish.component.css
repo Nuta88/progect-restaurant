@@ -31,6 +31,7 @@ form .form-icons .fa {
 	color: white;
 	width: 1rem;
 }
+.closeButton {padding-left: 15px; padding-right: 15px;}
 .button.disabled,
 .button.disabled:hover,
 .button.disabled:focus,
