@@ -1,4 +1,4 @@
-<form [formGroup]="myForm" novalidate #f="ngForm"
+<form [formGroup]="myForm" #f="ngForm"
 	(ngSubmit)="onSubmit(f.value); f.value='';myForm.reset();">
 
 	<div class="form-icons">
@@ -9,7 +9,7 @@
 			<div class="small-9 columns">
 				<div class="input-group">
 					<span class="input-group-label"> <i class="fa fa-coffee"></i>
-					</span> <input type="text" id="name" class="input-group-field"
+					</span> <input type="text" id="name" maxlength="10" class="input-group-field"
 						formControlName="name" name="name" ngModel>
 				</div>
 				<div>
@@ -38,7 +38,7 @@
 				<div class="input-group">
 					<span class="input-group-label"> <i class="fa fa-photo"></i>
 					</span> <input type="url" id="imgURL" required name="imgURL" ngModel
-						class="input-group-field" formControlName="imgURL">
+						class="input-group-field" maxlength="200" formControlName="imgURL">
 				</div>
 
 				<div data-closable class="alert-box callout alert"
@@ -117,5 +117,5 @@
 			</div>
 		</div>
 	</div>
-	
+
 </form>

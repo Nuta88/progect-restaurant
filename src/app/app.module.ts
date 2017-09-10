@@ -20,6 +20,7 @@ import {EditDishPriceComponent} from './edit-dish-price/edit-dish-price.componen
 import {FormAddDishComponent} from './form-add-dish/form-add-dish.component';
 import {ModalWindowComponent} from './modal-window/modal-window.component';
 import { RestaurantFooterComponent } from './restaurant-footer/restaurant-footer.component';
+import { ModalWindowPriceComponent } from './modal-window-price/modal-window-price.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { RestaurantFooterComponent } from './restaurant-footer/restaurant-footer
     FormAddDishComponent,
     ModalWindowComponent,
     RestaurantFooterComponent,
+    ModalWindowPriceComponent,
   ],
   imports: [
     BrowserModule,

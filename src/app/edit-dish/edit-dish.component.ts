@@ -1,17 +1,16 @@
 import {Component, OnInit} from '@angular/core';
-import {Location} from '@angular/common';
 import {NgForm} from '@angular/forms';
 
 import {DishService} from '../dish.service';
 import {Dish} from '../dish';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-edit-dish',
   templateUrl: './edit-dish.component.html',
-  styleUrls: ['./edit-dish.component.css']
+  styleUrls: ['./edit-dish.component.css', '../add-dish/add-dish.component.css']
 })
 export class EditDishComponent implements OnInit {
+     captionDishes = "assets/images/captionDishes.png";
 
   name = {};
 
@@ -20,7 +19,7 @@ export class EditDishComponent implements OnInit {
   dishes: Dish[];
 
 
-  constructor(private dishService: DishService, private location: Location) {}
+  constructor(private dishService: DishService) {}
 
   delete(dish: Dish): void {
     this.dishService
@@ -32,10 +31,6 @@ export class EditDishComponent implements OnInit {
 
   onChanged(form) {
     this.dishService.update(form)
-  }
-
-  goBack(): void {
-    this.location.forward();
   }
 
 

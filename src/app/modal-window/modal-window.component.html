@@ -1,15 +1,26 @@
 <div id="myModal" class="modal fade" tabindex="-1">
-	<!--  *ngIf="closeModal" -->
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h4 class="modal-title">Update name: {{dishName.name}}</h4>
+				<h4 class="modal-title text-center">
+					Update name: <span class="name-change-dishes">{{dishName.name}}</span>
+				</h4>
 			</div>
 			<div class="modal-body">
-				<form #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
-					<label for="name">Name</label> <input type="text"
-						id={{dishName.id}} required name="name"
-						[(ngModel)]="dishName.name" placeholder={{dishName.name}}>
+				<form #f="ngForm" novalidate (ngSubmit)="onSubmit(f.value); f.value=''">
+
+					<div class="row">
+						<div class="small-3 columns">
+							<label for="{{dishName.id}}" class="name-input">Input new name</label>
+						</div>
+						<div class="small-9 columns">
+							<input type="text" id={{dishName.id}}
+								[(ngModel)]="dishName.name" placeholder={{dishName.name}}
+								maxlength="10" name="name">	
+								
+						</div>
+
+					</div>
 					<label for="id" class="none">Name</label> <input class="none"
 						type="text" id={{dishName.id}} required name="id"
 						[(ngModel)]="dishName.id" placeholder={{dishName.id}}> <label
@@ -19,29 +30,25 @@
 					<label for="price" class="none">imgURL</label> <input class="none"
 						type="text" id="price" required name="price"
 						[(ngModel)]="dishName.price" placeholder={{dishName.price}}>
-						
-						
-						
-						<p-calendar [(ngModel)]="dishName.calendar1" id="calendar1" name="calendar1" class="none"
-					dateFormat="dd.mm.yy" dataType="string" placeholder="Date from"></p-calendar>
-					
-					<input type="text" id="calendar2" class="none"
-						 name="calendar2" [(ngModel)]="dishName.calendar2">
-					
-					
 
 
 
-					<div class="text-center">
-						<button type="submit" class="btn btn-md btn-success">update
-							dish</button>
+					<p-calendar [(ngModel)]="dishName.calendar1" id="calendar1"
+						name="calendar1" class="none" dateFormat="dd.mm.yy"
+						dataType="string" placeholder="Date from"></p-calendar>
+
+					<input type="text" id="calendar2" class="none" name="calendar2"
+						[(ngModel)]="dishName.calendar2">
+
+
+					<div class="button-modal text-center">
+						<button type="submit" class="btn btn-md btn-success">Update</button>
+						<button class="btn btn-md btn-danger" type="button"
+							data-dismiss="modal" #closeBtn>Close</button>
 					</div>
 				</form>
 			</div>
-			<div class="modal-footer">
-				<button class="btn btn-default" type="button" data-dismiss="modal"
-					#closeBtn>Close</button>
-			</div>
+			<div class="modal-footer"></div>
 		</div>
 	</div>
 </div>

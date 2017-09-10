@@ -1,0 +1,76 @@
+<div id="myModal" class="modal fade" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title text-center">
+					Update name: <span class="name-change-dishes">{{selectDish.name}}</span>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<form #f="ngForm" novalidate
+					(ngSubmit)="onSubmit(f.value); f.value=''">
+
+					<div class="row none">
+						<div class="small-3 columns">
+							<label for="name" class="name-input">Input new
+								name</label>
+						</div>
+						<div class="small-9 columns">
+							<input type="text" id="name" [(ngModel)]="selectDish.name"
+								placeholder={{selectDish.name}} maxlength="10" name="name">
+
+						</div>
+
+					</div>
+					<label for="id" class="none">Id</label> 
+					<input
+						class="none" type="text" id="id" required name="id"
+						[(ngModel)]="selectDish.id" placeholder={{selectDish.id}}> <label
+						for="dishName.id" class="none">imgURL</label> <input class="none"
+						type="text" id={{selectDish.id}} required name="imgURL"
+						[(ngModel)]="selectDish.imgURL" placeholder={{selectDish.imgURL}}>
+
+					<label for="price">Price</label> <input type="text"
+						id="price" required name="price" [(ngModel)]="selectDish.price"
+						placeholder={{selectDish.price}}>
+
+					<div class="row">
+						<div class="small-6 columns">
+							<div class="input-group">
+								<span class="input-group-label"> <i
+									class="fa fa-calendar"></i>
+								</span>
+							 <p-calendar [(ngModel)]="date1"
+									dateFormat="dd.mm.yy" dataType="string" [minDate]="minDate"
+									(onSelect)="selectDate($event)" [readonlyInput]="true"
+									[locale]="en" placeholder="Date from"
+									styleClass="input-group-field" inputStyleClass="form-control"
+									class="input-group-field"></p-calendar>
+							</div>
+						</div>
+
+
+						<div class="small-6 columns">
+							<div class="input-group">
+								<span class="input-group-label"> <i
+									class="fa fa-calendar"></i>
+								</span> <input type="text" readonly id="calendar2" name="calendar2"
+									[(ngModel)]="date2" 
+									placeholder="Date to" class="input-group-field">
+							</div>
+
+						</div>
+					</div>
+
+
+					<div class="button-modal text-center">
+						<button type="submit" class="btn btn-md btn-success">Update</button>
+						<button class="btn btn-md btn-danger" type="button"
+							data-dismiss="modal" #closeBtn>Close</button>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>

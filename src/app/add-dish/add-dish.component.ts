@@ -28,8 +28,6 @@ export class AddDishComponent implements OnInit {
             });
     }
 
-    date3: Date;
-
     ngOnInit(): void {
         this.dishService.getDishes().then(dishes => this.dishes = dishes);
     }
