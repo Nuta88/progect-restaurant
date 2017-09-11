@@ -7,7 +7,7 @@
 				</h4>
 			</div>
 			<div class="modal-body">
-				<form #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
+				<form [formGroup]="myFormModal" #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
 
 					<div class="row">
 						<div class="small-3 columns">
@@ -15,7 +15,9 @@
 						</div>
 						<div class="small-9 columns">
 							<input type="text" maxlength="10"
-						 name="name"  [(ngModel)]="dishName.name" placeholder={{dishName.name}} >	
+						 name="name" class="form-control"  [(ngModel)]="dishName.name" placeholder={{dishName.name}} formControlName="nameDish" >
+						 
+						 <p>https://stackoverflow.com/questions/43146981/using-ngmodel-with-reactive-forms</p>
 								
 						</div>
 

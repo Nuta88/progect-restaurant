@@ -1,5 +1,5 @@
 import {Component, ViewChild, EventEmitter, Input, Output, ElementRef} from '@angular/core';
-import {FormsModule, FormGroup, FormControl, Validators} from '@angular/forms'
+import {FormsModule, FormGroup, FormControl, FormBuilder, Validators} from '@angular/forms'
 import {Dish} from '../dish';
 
 @Component({
@@ -7,7 +7,7 @@ import {Dish} from '../dish';
     templateUrl: './modal-window.component.html',
     styleUrls: ['./modal-window.component.css']
 })
-export class ModalWindowComponent {
+export class ModalWindowComponent  {
     myFormModal: FormGroup;
 
     @Input() dishName: Dish;
