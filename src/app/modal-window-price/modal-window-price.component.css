@@ -5,18 +5,19 @@
 }
 
 .name-input {
-	color: white;
+		color: rgb(233, 205, 168);
 	font-size: 1.07rem;
 }
 
 input {
 	background-color: rgba(94, 82, 76, .8);
-	color: rgb(233, 205, 168);;
+
 	text-transform: capitalize;
 }
 
 input:focus {
-	background-color: rgba(104, 91, 84, .8); color: white;
+	background-color: rgba(104, 91, 84, .8);
+	color: white;
 }
 
 .name-change-dishes {
@@ -29,15 +30,29 @@ input:focus {
 	font-size: 1.6rem;
 }
 
-.row{ margin-top: 0.7rem;}
+.row {
+	margin-top: 0.7rem;
+}
 
 .none {
 	display: none;
 }
-.button-modal {margin-bottom: 0.7rem; margin-top: 0.7rem;}
-.modal-footer{height: 4rem;}
 
+.button-modal {
+	margin-bottom: 0.7rem;
+	margin-top: 0.7rem;
+}
 
+.modal-footer {
+	height: 4rem;
+}
 
-        input.ng-touched.ng-invalid {border:solid red 2px;}
-        input.ng-touched.ng-valid {border:solid green 2px;}
+input.ng-touched.ng-invalid {
+	border: solid red 2px;
+}
+
+input.ng-touched.ng-valid {
+	border: solid green 2px;
+}
+
+input .colorInputCalendar {color: gray;}

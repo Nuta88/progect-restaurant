@@ -7,13 +7,11 @@
 				</h4>
 			</div>
 			<div class="modal-body">
-				<form #f="ngForm" novalidate
-					(ngSubmit)="onSubmit(f.value); f.value=''">
+				<form #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
 
 					<div class="row none">
 						<div class="small-3 columns">
-							<label for="name" class="name-input">Input new
-								name</label>
+							<label for="name" class="name-input">Input new name</label>
 						</div>
 						<div class="small-9 columns">
 							<input type="text" id="name" [(ngModel)]="selectDish.name"
@@ -22,17 +20,32 @@
 						</div>
 
 					</div>
-					<label for="id" class="none">Id</label> 
-					<input
-						class="none" type="text" id="id" required name="id"
-						[(ngModel)]="selectDish.id" placeholder={{selectDish.id}}> <label
-						for="dishName.id" class="none">imgURL</label> <input class="none"
-						type="text" id={{selectDish.id}} required name="imgURL"
-						[(ngModel)]="selectDish.imgURL" placeholder={{selectDish.imgURL}}>
 
-					<label for="price">Price</label> <input type="text"
-						id="price" required name="price" [(ngModel)]="selectDish.price"
-						placeholder={{selectDish.price}}>
+
+					<input class="none" type="text" id="id" required name="id"
+						[(ngModel)]="selectDish.id" placeholder={{selectDish.id}}>
+
+					<input class="none" type="text" id={{selectDish.id}} required
+						name="imgURL" [(ngModel)]="selectDish.imgURL"
+						placeholder={{selectDish.imgURL}}>
+
+
+
+
+					<div class="row">
+	
+						<div class="small-12 columns">
+							<div class="input-group">
+								<span class="input-group-label"> <i class="fa fa-dollar"></i>
+								</span> <input type="number" required name="price"
+									class="input-group-field name-input" [(ngModel)]="selectDish.price"
+									placeholder={{selectDish.price}}>
+							</div>
+						</div>
+					</div>
+
+
+
 
 					<div class="row">
 						<div class="small-6 columns">
@@ -40,12 +53,12 @@
 								<span class="input-group-label"> <i
 									class="fa fa-calendar"></i>
 								</span>
-							 <p-calendar [(ngModel)]="date1"
+								<p-calendar [(ngModel)]="selectDish.calendar1"
 									dateFormat="dd.mm.yy" dataType="string" [minDate]="minDate"
-									(onSelect)="selectDate($event)" [readonlyInput]="true"
-									[locale]="en" placeholder="Date from"
-									styleClass="input-group-field" inputStyleClass="form-control"
-									class="input-group-field"></p-calendar>
+									name="calendar1" (onSelect)="selectDate($event)"
+									[readonlyInput]="true" (onFocus)="focus($event)" [locale]="en"
+									placeholder="Date from" styleClass="input-group-field"
+									inputStyleClass="form-control" class="input-group-field"></p-calendar>
 							</div>
 						</div>
 
@@ -54,9 +67,9 @@
 							<div class="input-group">
 								<span class="input-group-label"> <i
 									class="fa fa-calendar"></i>
-								</span> <input type="text" readonly id="calendar2" name="calendar2"
-									[(ngModel)]="date2" 
-									placeholder="Date to" class="input-group-field">
+								</span> <input type="text" readonly name="calendar2"
+									[(ngModel)]="selectDish.calendar2" placeholder="Date to"
+									class="input-group-field colorInputCalendar">
 							</div>
 
 						</div>

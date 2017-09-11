@@ -7,7 +7,7 @@ import {Dish} from '../dish';
 @Component({
     selector: 'app-add-dish',
     templateUrl: './add-dish.component.html',
-    styleUrls: ['./add-dish.component.css', '../../assets/images/foundation.min.css'],
+    styleUrls: ['./add-dish.component.css'],
     providers: [DishService]
 })
 export class AddDishComponent implements OnInit {

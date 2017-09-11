@@ -15,8 +15,8 @@ export class InMemoryDataService implements InMemoryDbService {
         name: "steak",
         imgURL: "assets/images/image2.jpg",
         price: 120,
-        calendar1: "22.04.2017",
-        calendar2: "22.11.2017"
+        calendar1: "07.04.2017",
+        calendar2: "22.19.2017"
       },
       {
         id: "3",

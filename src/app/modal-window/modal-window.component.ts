@@ -16,12 +16,13 @@ export class ModalWindowComponent {
 
     constructor() {
         this.myFormModal = new FormGroup({
-            "nameDish": new FormControl("", [
-                Validators.required,
-                Validators.pattern("^[a-zA-Z\s-]+$")
-            ])
-        })
-    }
+
+      "nameDish": new FormControl("", [
+        Validators.required,
+        Validators.pattern("^[a-zA-Z\s-]+$")
+      ])
+    });
+  }
 
     private closeModal(): void {
         this.closeBtn.nativeElement.click();

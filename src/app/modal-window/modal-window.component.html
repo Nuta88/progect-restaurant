@@ -7,33 +7,36 @@
 				</h4>
 			</div>
 			<div class="modal-body">
-				<form #f="ngForm" novalidate (ngSubmit)="onSubmit(f.value); f.value=''">
+				<form #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
 
 					<div class="row">
 						<div class="small-3 columns">
-							<label for="{{dishName.id}}" class="name-input">Input new name</label>
+							<label class="name-input">Input new name</label>
 						</div>
 						<div class="small-9 columns">
-							<input type="text" id={{dishName.id}}
-								[(ngModel)]="dishName.name" placeholder={{dishName.name}}
-								maxlength="10" name="name">	
+							<input type="text" maxlength="10"
+						 name="name"  [(ngModel)]="dishName.name" placeholder={{dishName.name}} >	
 								
 						</div>
 
 					</div>
-					<label for="id" class="none">Name</label> <input class="none"
-						type="text" id={{dishName.id}} required name="id"
-						[(ngModel)]="dishName.id" placeholder={{dishName.id}}> <label
-						for="imgURL" class="none">imgURL</label> <input class="none"
-						type="text" id="imgURL" required name="imgURL"
-						[(ngModel)]="dishName.imgURL" placeholder={{dishName.imgURL}}>
-					<label for="price" class="none">imgURL</label> <input class="none"
-						type="text" id="price" required name="price"
-						[(ngModel)]="dishName.price" placeholder={{dishName.price}}>
+					
+					<input class="none" type="url" required name="imgURL" [(ngModel)]="dishName.imgURL" placeholder={{dishName.imgURL}}
+					 maxlength="200">
+					
+					
+					<input class="none"
+						type="text" required name="id"
+						[(ngModel)]="dishName.id" placeholder={{dishName.id}}> 
+						
+						
+					<input type="number" class="none" required name="price" ngModel
+					 [(ngModel)]="dishName.price" placeholder={{dishName.price}}>
 
 
 
-					<p-calendar [(ngModel)]="dishName.calendar1" id="calendar1"
+
+					<p-calendar [(ngModel)]="dishName.calendar1"
 						name="calendar1" class="none" dateFormat="dd.mm.yy"
 						dataType="string" placeholder="Date from"></p-calendar>
 
@@ -42,7 +45,7 @@
 
 
 					<div class="button-modal text-center">
-						<button type="submit" class="btn btn-md btn-success">Update</button>
+						<button type="submit" class="btn btn-md btn-success" [disabled]="myFormModal.invalid">Update</button>
 						<button class="btn btn-md btn-danger" type="button"
 							data-dismiss="modal" #closeBtn>Close</button>
 					</div>
