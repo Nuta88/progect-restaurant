@@ -7,7 +7,7 @@ import {Dish} from '../dish';
     templateUrl: './modal-window.component.html',
     styleUrls: ['./modal-window.component.css']
 })
-export class ModalWindowComponent  {
+export class ModalWindowComponent {
     myFormModal: FormGroup;
 
     @Input() dishName: Dish;
@@ -15,17 +15,26 @@ export class ModalWindowComponent  {
     @ViewChild('closeBtn') closeBtn: ElementRef;
 
     constructor() {
+
         this.myFormModal = new FormGroup({
 
-      "nameDish": new FormControl("", [
-        Validators.required,
-        Validators.pattern("^[a-zA-Z\s-]+$")
-      ])
-    });
-  }
+            "name": new FormControl("", [
+                Validators.required,
+                Validators.pattern("^[a-zA-Z\s-]+$")
+            ]),
+            "imgURL": new FormControl(),
+            "id": new FormControl(),
+            "price": new FormControl(),
+            "calendar1": new FormControl(),
+            "calendar2": new FormControl()
+        });
+    }
 
     private closeModal(): void {
         this.closeBtn.nativeElement.click();
+    }
+    refresh(): void {
+        window.location.reload();
     }
 
     @Output() onChanged = new EventEmitter<any>();
@@ -34,6 +43,4 @@ export class ModalWindowComponent  {
         console.log(form.name);
         this.closeModal();
     }
-
-
 }

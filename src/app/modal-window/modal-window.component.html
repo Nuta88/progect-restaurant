@@ -1,4 +1,4 @@
-<div id="myModal" class="modal fade" tabindex="-1">
+<div id="myModal" class="modal fade" tabindex="-1" data-backdrop="static">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -7,49 +7,47 @@
 				</h4>
 			</div>
 			<div class="modal-body">
-				<form [formGroup]="myFormModal" #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
+				<form [formGroup]="myFormModal" #f="ngForm"
+					(ngSubmit)="onSubmit(f.value); f.value=''">
 
 					<div class="row">
 						<div class="small-3 columns">
 							<label class="name-input">Input new name</label>
 						</div>
 						<div class="small-9 columns">
-							<input type="text" maxlength="10"
-						 name="name" class="form-control"  [(ngModel)]="dishName.name" placeholder={{dishName.name}} formControlName="nameDish" >
-						 
-						 <p>https://stackoverflow.com/questions/43146981/using-ngmodel-with-reactive-forms</p>
-								
+							<input type="text" maxlength="10" name="name"
+								class="form-control" [(ngModel)]="dishName.name"
+								placeholder={{dishName.name}} formControlName="name">
 						</div>
 
 					</div>
-					
-					<input class="none" type="url" required name="imgURL" [(ngModel)]="dishName.imgURL" placeholder={{dishName.imgURL}}
-					 maxlength="200">
-					
-					
-					<input class="none"
-						type="text" required name="id"
-						[(ngModel)]="dishName.id" placeholder={{dishName.id}}> 
-						
-						
+
+					<input class="none" type="url" required name="imgURL"
+						[(ngModel)]="dishName.imgURL" placeholder={{dishName.imgURL}}
+						maxlength="200" formControlName="imgURL"> 
+						<input class="none" type="text" required
+						name="id" [(ngModel)]="dishName.id" placeholder={{dishName.id}} formControlName="id">
+
+
 					<input type="number" class="none" required name="price" ngModel
-					 [(ngModel)]="dishName.price" placeholder={{dishName.price}}>
+						[(ngModel)]="dishName.price" placeholder={{dishName.price}} formControlName="price">
 
 
 
 
-					<p-calendar [(ngModel)]="dishName.calendar1"
-						name="calendar1" class="none" dateFormat="dd.mm.yy"
-						dataType="string" placeholder="Date from"></p-calendar>
+					<p-calendar [(ngModel)]="dishName.calendar1" name="calendar1"
+						class="none" dateFormat="dd.mm.yy" dataType="string"
+						placeholder="Date from" formControlName="calendar1"></p-calendar>
 
 					<input type="text" id="calendar2" class="none" name="calendar2"
-						[(ngModel)]="dishName.calendar2">
+						[(ngModel)]="dishName.calendar2" formControlName="calendar2">
 
 
 					<div class="button-modal text-center">
-						<button type="submit" class="btn btn-md btn-success" [disabled]="myFormModal.invalid">Update</button>
+						<button type="submit" class="btn btn-md btn-success"
+							[disabled]="myFormModal.invalid">Update</button>
 						<button class="btn btn-md btn-danger" type="button"
-							data-dismiss="modal" #closeBtn>Close</button>
+							data-dismiss="modal" (click)="refresh()" #closeBtn>Close</button>
 					</div>
 				</form>
 			</div>

@@ -55,7 +55,7 @@ export class FormAddDishComponent {
       ]),
       "price": new FormControl(0, [
         Validators.required,
-        Validators.pattern("^[0-9]+$")
+        Validators.pattern("[0-9]+(\\.[0-9][0-9]?)?")
       ]),
       "calendar1": new FormControl("",
         Validators.required),
