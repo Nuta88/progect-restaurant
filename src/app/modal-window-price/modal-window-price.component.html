@@ -1,4 +1,5 @@
-<div id="myModal" class="modal fade" tabindex="-1" data-backdrop="static">
+<div id="myModal" class="modal fade" tabindex="-1"
+	data-backdrop="static">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -7,30 +8,33 @@
 				</h4>
 			</div>
 			<div class="modal-body">
-				<form [formGroup]="myFormModalPrice" #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
-
-					
-							<input type="text" class="none" name="name" [(ngModel)]="selectDish.name"
-								value={{selectDish.name}} maxlength="10" name="name" formControlName="name">
+				<form [formGroup]="myFormModalPrice" #f="ngForm"
+					(ngSubmit)="onSubmit(f.value); f.value=''">
 
 
-					<input class="none" type="text" required name="id"
-						[(ngModel)]="selectDish.id" value={{selectDish.id}} formControlName="id">
-
-					<input class="none" type="text" id={{selectDish.id}} required
-						name="imgURL" [(ngModel)]="selectDish.imgURL"
-						value={{selectDish.imgURL}} formControlName="imgURL">
+					<input type="text" class="none" name="name"
+						[(ngModel)]="selectDish.name"
+						maxlength="10" name="name" formControlName="name">
+						 
+						<input class="none" type="text" required name="id"
+						[(ngModel)]="selectDish.id"
+						formControlName="id"> 
+						
+						<input class="none" type="text"
+						required name="imgURL"
+						[(ngModel)]="selectDish.imgURL"
+						formControlName="imgURL">
 
 
 
 					<div class="row">
-	
+
 						<div class="small-12 columns">
 							<div class="input-group">
 								<span class="input-group-label"> <i class="fa fa-dollar"></i>
 								</span> <input type="number" required name="price"
-									class="input-group-field name-input"
-									value={{selectDish.price}} formControlName="price">
+									class="input-group-field name-input" value={{selectDish.price}}
+									formControlName="price">
 							</div>
 						</div>
 					</div>
@@ -49,7 +53,8 @@
 									name="calendar1" (onSelect)="selectDate($event)"
 									[readonlyInput]="true" (onFocus)="focus($event)" [locale]="en"
 									value="Date from" styleClass="input-group-field"
-									inputStyleClass="form-control" class="input-group-field" formControlName="calendar1"></p-calendar>
+									inputStyleClass="form-control" class="input-group-field"
+									formControlName="calendar1"></p-calendar>
 							</div>
 						</div>
 
@@ -60,7 +65,8 @@
 									class="fa fa-calendar"></i>
 								</span> <input type="text" readonly name="calendar2"
 									[(ngModel)]="selectDish.calendar2" value="Date to"
-									class="input-group-field colorInputCalendar" formControlName="calendar2">
+									class="input-group-field colorInputCalendar"
+									formControlName="calendar2">
 							</div>
 
 						</div>
@@ -68,7 +74,9 @@
 
 
 					<div class="button-modal text-center">
-						<button type="submit" class="btn btn-md btn-success"  (click)="addPrice(f.value); f.value=''" [disabled]="myFormModalPrice.invalid">Update</button>
+						<button type="submit" class="btn btn-md btn-success"
+							(click)="addPrice(f.value); f.value=''"
+							[disabled]="myFormModalPrice.invalid">Update</button>
 						<button class="btn btn-md btn-danger" type="button"
 							data-dismiss="modal" #closeBtn>Close</button>
 					</div>

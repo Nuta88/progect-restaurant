@@ -83,7 +83,6 @@ export class ModalWindowPriceComponent {
   @Output() onChanged = new EventEmitter<any>();
   onSubmit(form) {
     this.onChanged.emit(form);
-    console.log(form.name);
     this.closeModal();
   }
 
