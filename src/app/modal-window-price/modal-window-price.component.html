@@ -1,34 +1,25 @@
-<div id="myModal" class="modal fade" tabindex="-1">
+<div id="myModal" class="modal fade" tabindex="-1" data-backdrop="static">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h4 class="modal-title text-center">
-					Update name: <span class="name-change-dishes">{{selectDish.name}}</span>
+					Update dish: <span class="name-change-dishes">{{selectDish.name}}</span>
 				</h4>
 			</div>
 			<div class="modal-body">
-				<form #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
+				<form [formGroup]="myFormModalPrice" #f="ngForm" (ngSubmit)="onSubmit(f.value); f.value=''">
 
-					<div class="row none">
-						<div class="small-3 columns">
-							<label for="name" class="name-input">Input new name</label>
-						</div>
-						<div class="small-9 columns">
-							<input type="text" id="name" [(ngModel)]="selectDish.name"
-								placeholder={{selectDish.name}} maxlength="10" name="name">
-
-						</div>
-
-					</div>
+					
+							<input type="text" class="none" name="name" [(ngModel)]="selectDish.name"
+								value={{selectDish.name}} maxlength="10" name="name" formControlName="name">
 
 
-					<input class="none" type="text" id="id" required name="id"
-						[(ngModel)]="selectDish.id" placeholder={{selectDish.id}}>
+					<input class="none" type="text" required name="id"
+						[(ngModel)]="selectDish.id" value={{selectDish.id}} formControlName="id">
 
 					<input class="none" type="text" id={{selectDish.id}} required
 						name="imgURL" [(ngModel)]="selectDish.imgURL"
-						placeholder={{selectDish.imgURL}}>
-
+						value={{selectDish.imgURL}} formControlName="imgURL">
 
 
 
@@ -38,8 +29,8 @@
 							<div class="input-group">
 								<span class="input-group-label"> <i class="fa fa-dollar"></i>
 								</span> <input type="number" required name="price"
-									class="input-group-field name-input" [(ngModel)]="selectDish.price"
-									placeholder={{selectDish.price}}>
+									class="input-group-field name-input"
+									value={{selectDish.price}} formControlName="price">
 							</div>
 						</div>
 					</div>
@@ -57,8 +48,8 @@
 									dateFormat="dd.mm.yy" dataType="string" [minDate]="minDate"
 									name="calendar1" (onSelect)="selectDate($event)"
 									[readonlyInput]="true" (onFocus)="focus($event)" [locale]="en"
-									placeholder="Date from" styleClass="input-group-field"
-									inputStyleClass="form-control" class="input-group-field"></p-calendar>
+									value="Date from" styleClass="input-group-field"
+									inputStyleClass="form-control" class="input-group-field" formControlName="calendar1"></p-calendar>
 							</div>
 						</div>
 
@@ -68,8 +59,8 @@
 								<span class="input-group-label"> <i
 									class="fa fa-calendar"></i>
 								</span> <input type="text" readonly name="calendar2"
-									[(ngModel)]="selectDish.calendar2" placeholder="Date to"
-									class="input-group-field colorInputCalendar">
+									[(ngModel)]="selectDish.calendar2" value="Date to"
+									class="input-group-field colorInputCalendar" formControlName="calendar2">
 							</div>
 
 						</div>
@@ -77,7 +68,7 @@
 
 
 					<div class="button-modal text-center">
-						<button type="submit" class="btn btn-md btn-success">Update</button>
+						<button type="submit" class="btn btn-md btn-success"  (click)="addPrice(f.value); f.value=''" [disabled]="myFormModalPrice.invalid">Update</button>
 						<button class="btn btn-md btn-danger" type="button"
 							data-dismiss="modal" #closeBtn>Close</button>
 					</div>

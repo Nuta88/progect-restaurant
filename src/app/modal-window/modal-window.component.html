@@ -16,20 +16,20 @@
 						</div>
 						<div class="small-9 columns">
 							<input type="text" maxlength="10" name="name"
-								class="form-control" [(ngModel)]="dishName.name"
-								placeholder={{dishName.name}} formControlName="name">
+								class="form-control" 
+								value={{dishName.name}} formControlName="name">
 						</div>
 
 					</div>
 
 					<input class="none" type="url" required name="imgURL"
 						[(ngModel)]="dishName.imgURL" placeholder={{dishName.imgURL}}
-						maxlength="200" formControlName="imgURL"> 
+						formControlName="imgURL"> 
 						<input class="none" type="text" required
 						name="id" [(ngModel)]="dishName.id" placeholder={{dishName.id}} formControlName="id">
 
 
-					<input type="number" class="none" required name="price" ngModel
+					<input type="number" class="none" required name="price"
 						[(ngModel)]="dishName.price" placeholder={{dishName.price}} formControlName="price">
 
 
@@ -45,9 +45,9 @@
 
 					<div class="button-modal text-center">
 						<button type="submit" class="btn btn-md btn-success"
-							[disabled]="myFormModal.invalid">Update</button>
+							[disabled]="myFormModal.invalid" (click)="addName(f.value); f.value=''">Update</button>
 						<button class="btn btn-md btn-danger" type="button"
-							data-dismiss="modal" (click)="refresh()" #closeBtn>Close</button>
+							data-dismiss="modal" #closeBtn>Close</button>
 					</div>
 				</form>
 			</div>

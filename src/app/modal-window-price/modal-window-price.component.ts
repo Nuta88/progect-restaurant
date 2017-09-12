@@ -10,6 +10,8 @@ import {Dish} from '../dish';
 })
 export class ModalWindowPriceComponent {
 
+  myFormModalPrice: FormGroup;
+
   @Input() selectDish: Dish;
 
   @ViewChild('closeBtn') closeBtn: ElementRef;
@@ -19,7 +21,25 @@ export class ModalWindowPriceComponent {
   minDate: Date;
 
   constructor() {
+
+    this.myFormModalPrice = new FormGroup({
+
+      "name": new FormControl(),
+      "imgURL": new FormControl(),
+      "id": new FormControl(),
+      "price": new FormControl("", [
+        Validators.required,
+        Validators.pattern("[0-9]{1,3}(\\.[0-9][0-9]?)?")
+      ]),
+      "calendar1": new FormControl(),
+      "calendar2": new FormControl()
+    });
+
   }
+  
+    addPrice(form){
+      this.selectDish.price = form.price;
+    }
 
 
   ngOnInit() {
@@ -42,14 +62,15 @@ export class ModalWindowPriceComponent {
     };
   }
 
-  focus(calendar){
+  focus(calendar) {
     let today = new Date();
     this.focuc = new Date();
     this.focuc.setDate(today.getDate())
-    this.selectDish.calendar1 =((this.focuc.getDate()) + ".0" + (this.focuc.getMonth() + 1) + "." + this.focuc.getFullYear());
-    console.log(this.selectDish.calendar1)}
-  
-  
+    this.selectDish.calendar1 = ((this.focuc.getDate()) + ".0" + (this.focuc.getMonth() + 1) + "." + this.focuc.getFullYear());
+    console.log(this.selectDish.calendar1)
+  }
+
+
   selectDate(date) {
     let del = 6 - date.getDay();
     this.selectDish.calendar2 = ((date.getDate() + del) + ".0" + (date.getMonth() + 1) + "." + date.getFullYear());

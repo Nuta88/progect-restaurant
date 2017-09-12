@@ -1,5 +1,5 @@
 import {Component, ViewChild, EventEmitter, Input, Output, ElementRef} from '@angular/core';
-import {FormsModule, FormGroup, FormControl, FormBuilder, Validators} from '@angular/forms'
+import {FormsModule, FormGroup, FormControl,  Validators} from '@angular/forms'
 import {Dish} from '../dish';
 
 @Component({
@@ -33,9 +33,12 @@ export class ModalWindowComponent {
     private closeModal(): void {
         this.closeBtn.nativeElement.click();
     }
-    refresh(): void {
-        window.location.reload();
+  
+      addName(form){
+      this.dishName.name = form.name;
     }
+  
+
 
     @Output() onChanged = new EventEmitter<any>();
     onSubmit(form) {

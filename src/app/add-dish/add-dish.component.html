@@ -1,3 +1,32 @@
+<!-- <div class="row">
+<div class="medium-12 large-12">
+
+<div class="row dishes bgDishes">
+	<div class="medium-6 large-6 columns">
+		<div class="row small-up-2">
+			<div class="column down">
+				<img class="thumbnail" src={{menu}}>
+			</div>
+			<div class="column down">
+				<img class="thumbnail" src={{kitchen}}>
+			</div>
+			<div class="column">
+				<img class="thumbnail" src={{wine}}>
+			</div>
+			<div class="column">
+				<img class="thumbnail" src={{meat}}>
+			</div>
+
+
+		</div>
+	</div> 
+
+
+</div>
+<div class="medium-12 large-12"></div>
+
+</div>-->
+
 
 <div class="row dishes bgDishes">
 	<div class="medium-6 large-6 columns">
@@ -35,8 +64,7 @@
 	<h2 class="captionDishes text-center">
 		<img src={{captionDishes}}>
 	</h2>
-	<div class="column conteinerDishes"
-		*ngFor="let dish of dishes">
+	<div class="column conteinerDishes" *ngFor="let dish of dishes">
 		<div class="card-user-container">
 			<div class="card-user-avatar">
 				<img src={{dish.imgURL}} alt="" class="user-image">

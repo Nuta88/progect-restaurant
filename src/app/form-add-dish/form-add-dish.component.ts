@@ -53,7 +53,7 @@ export class FormAddDishComponent {
         Validators.required,
         Validators.pattern("https?://.+")
       ]),
-      "price": new FormControl(0, [
+      "price": new FormControl("", [
         Validators.required,
         Validators.pattern("[0-9]+(\\.[0-9][0-9]?)?")
       ]),
