@@ -12,19 +12,9 @@
 					</span> <input type="text" maxlength="10" class="input-group-field"
 						formControlName="name" name="name" ngModel>
 				</div>
-				<div>
-					<div data-closable class="alert-box callout alert"
-						*ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched">
-						<div class="text-left messeng">
-							<i class="fa fa-ban"></i> Incorrect name. Please try again.
-						</div>
-
-						<button class="close-button" aria-label="Dismiss alert"
-							type="button" data-close>
-							<span aria-hidden="true" class="cloesMesseng">x</span>
-						</button>
-					</div>
-				</div>
+				<div class="errMesseng errMessengName"
+					*ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched">
+					 must consists of letters, not longer than 10 characters, without spaces</div>
 
 			</div>
 		</div>
@@ -38,20 +28,12 @@
 				<div class="input-group">
 					<span class="input-group-label"> <i class="fa fa-photo"></i>
 					</span> <input type="url" required name="imgURL" ngModel
-						class="input-group-field" maxlength="200" formControlName="imgURL">
+						class="input-group-field" maxlength="100" formControlName="imgURL">
 				</div>
-
-				<div data-closable class="alert-box callout alert"
+				<div class="errMesseng errMessengURL"
 					*ngIf="myForm.controls['imgURL'].invalid && myForm.controls['imgURL'].touched">
-					<div class="text-left messeng">
-						<i class="fa fa-ban"></i> Incorrect url. Please try again.
-					</div>
+					must begin with "https" and not longer than 100 characters</div>
 
-					<button class="close-button" aria-label="Dismiss alert"
-						type="button" data-close>
-						<span aria-hidden="true" class="cloesMesseng">x</span>
-					</button>
-				</div>
 			</div>
 		</div>
 
@@ -66,19 +48,11 @@
 						class="input-group-field" formControlName="price">
 				</div>
 
-				<div data-closable class="alert-box callout alert"
+				<div class="errMesseng errMessengPrice"
 					*ngIf="myForm.controls['price'].invalid && myForm.controls['price'].touched">
-					<div class="text-left messeng">
-						<i class="fa fa-ban"></i> Incorrect price. Please try again.
-					</div>
+					must consists of numbers and 111.11 </div>
 
-					<button class="close-button" aria-label="Dismiss alert"
-						type="button" data-close>
-						<span aria-hidden="true" class="cloesMesseng">x</span>
-					</button>
-				</div>
 			</div>
-
 		</div>
 
 		<div class="row">

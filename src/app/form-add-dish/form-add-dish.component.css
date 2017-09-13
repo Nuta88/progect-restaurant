@@ -43,6 +43,19 @@ form .form-icons .fa {
 .button:hover,
 .button:focus{background-color: rgb(35,31,32);}
 
-.callout{position: absolute; z-index: 10098 !important;}
-.messeng {margin-right:45px; }
-.cloesMesseng {font-size: 0.7em;}
+.errMesseng{position: absolute; z-index: 10098 !important; font-size: 0.8rem; color: red; }
+.errMessengName {top: 12.78rem; right: 23.8rem;}
+.errMessengURL {top: 16.52rem; right: 26rem;}
+.errMessengPrice{top: 20.25rem; right: 29rem;}
+
+
+
+
+
+
+
+
+
+
+
+

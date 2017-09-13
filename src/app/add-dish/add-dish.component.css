@@ -2,7 +2,13 @@
 	text-transform: capitalize;
 	font-weight: bold;
 }
- h3 .nameDish {
+
+h3 .nameDish {
+	font-weight: bold;
+	color: rgb(49, 42, 39);
+}
+
+div .nameForm {
 	font-weight: bold;
 	color: rgb(49, 42, 39);
 }
@@ -14,8 +20,10 @@
 .captionDishes {
 	background-color: rgb(49, 42, 39);
 	color: white;
-	margin-bottom: 70px;
+	margin-bottom: 70px;	
 }
+
+.captionDishes img {vertical-align: top;}
 
 .bgDishes {
 	background-color: rgba(171, 130, 77, .6);
@@ -26,97 +34,41 @@
 	padding-bottom: 70px;
 }
 
-
-.noMargin {
-	margin: 0;
-}
-
-.card-user-container {
-	margin-bottom: 5rem;
-	background-color: #fefefe; overflow : hidden;
-	padding: 0;
-	border-radius: 0;
-	overflow: hidden;
-}
-
-.card-user-container .card-user-avatar .user-image {
-	display: block;
-	margin: auto;  
-	width: 14rem;
-	height: 11rem;
-	padding: 0.9rem;
-}
-
-.card-user-container .card-user-avatar .user-image:hover {
-	-webkit-transform: scale(1.1);
-	-ms-transform: scale(1.1);
-	transform: scale(1.1);
-}
-
-.card-user-container .card-user-bio {
-	padding-top: 0.5rem;
-	text-align: center;
-	font-weight: bold;
-	color: rgb(49, 42, 39);
-}
-
-.card-user-container .card-user-social {
-	background: rgba(171, 130, 77, .6);
-	text-align: center;
-	padding-top: 0.9rem;
-	padding-bottom: 0.1rem;
-	color: white;
-	font-weight: bold;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .card-product-hover-title {
-  font-size: 1.4rem;
-  font-weight: bold;
-  
-  margin-bottom: 0.2rem;
+	font-size: 1.4rem;
+	font-weight: bold;
+	margin-bottom: 0.2rem;
 }
 
 .card-product-hover {
-  position: relative;
-  line-height: 1.2rem;
-  transition: all 0.35s ease;
+	position: relative;
+	line-height: 1.2rem;
+	transition: all 0.35s ease;
 }
 
 .card-product-hover-details {
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-  padding: 1rem;
+	-webkit-flex: 1 0 auto;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	padding: 1rem;
 }
 
-.card-product-hover-details > :last-child {
-  margin-bottom: 0;
+.card-product-hover-details>:last-child {
+	margin-bottom: 0;
 }
 
 .card-product-hover-price {
-  margin: 0.5rem 0;
-  font-weight: 700;
+	margin: 0.5rem 0;
+	font-weight: 700;
 	color: rgb(49, 42, 39);
-  font-size: #1779ba;
+	font-size: #1779ba;
 }
 
-.card-product-hover .imgDish {
-	height: 13rem;}
-	
-	.card-product-hover:hover{filter: ;
+/* .card-product-hover .imgDish {
+	height: 16rem;
+} */
+
+.card-product-hover:hover {
+	filter:;
 	box-shadow: 0 0 0.5px 2px rgba(49, 42, 39, 0.4);
-   }
+}

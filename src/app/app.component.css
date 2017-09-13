@@ -2,7 +2,7 @@
 	position: fixed;
 	width: 100%;
 	top: -1px;
-	 z-index: 100;
+	z-index: 100;
 	 
 }
 
@@ -18,7 +18,7 @@
 ul, ol, dl {
 	list-style: none;
 }
-a {color: white; 	font-family: 'Times New Roman', Times, serif;}
+a {color: white; 	font-family: 'Times New Roman', Times, serif;} 
 
 [routerLinkActive="active"][_ngcontent-c0]:active {
 	font-family: 'Times New Roman', Times, serif;
@@ -26,4 +26,6 @@ a {color: white; 	font-family: 'Times New Roman', Times, serif;}
 }
 
 a:hover,a:active,a:focus {color: rgb(233, 205, 168);}
+
+
 

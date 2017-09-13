@@ -10,9 +10,11 @@
 			<img class="imgDish" src={{dish.imgURL}} alt="picture of dish" /> <img
 				src={{fonDish}} alt="picture of logotip" />
 			<div class="card-product-hover-icons">
-				<button type="button" class="btn btn-md btn-success"
-					data-toggle="modal" data-target="#myModal"
-					(click)="modalWindowPrice(dish)">Update</button>
+				<div>
+					<button type="button" class="btn btn-md btn-success buttonSize"
+						data-toggle="modal" data-target="#myModal"
+						(click)="modalWindowPrice(dish)">Update</button>
+				</div>
 			</div>
 
 			<div class="card-product-hover-details">
