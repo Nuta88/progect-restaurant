@@ -3,7 +3,7 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const dishes = [
       {
-        id: "1",
+        id: 1,
         name: "pizza",
         imgURL: "assets/images/image1.jpg",
         price: 20,
@@ -11,7 +11,7 @@ export class InMemoryDataService implements InMemoryDbService {
         calendar2: "22.10.2017"
       },
       {
-        id: "2",
+        id: 2,
         name: "steak",
         imgURL: "assets/images/image2.jpg",
         price: 120,
@@ -19,7 +19,7 @@ export class InMemoryDataService implements InMemoryDbService {
         calendar2: "22.19.2017"
       },
       {
-        id: "3",
+        id: 3,
         name: "Salad",
         imgURL: "assets/images/image3.jpg",
         price: 10,
@@ -27,7 +27,7 @@ export class InMemoryDataService implements InMemoryDbService {
         calendar2: "22.11.2017"
       },
       {
-        id: "4",
+        id: 4,
         name: "fish",
         imgURL: "assets/images/image4.jpg",
         price: 80,
@@ -35,7 +35,7 @@ export class InMemoryDataService implements InMemoryDbService {
         calendar2: "27.09.2017"
       },
       {
-        id: "5",
+        id: 5,
         name: "Shrimp",
         imgURL: "assets/images/image5.jpg",
         price: 100,
@@ -43,7 +43,7 @@ export class InMemoryDataService implements InMemoryDbService {
         calendar2: "22.11.2017"
       },
       {
-        id: "6",
+        id: 6,
         name: "soup",
         imgURL: "assets/images/image6.jpg",
         price: 60,

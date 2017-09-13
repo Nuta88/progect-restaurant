@@ -1,32 +1,3 @@
-<!-- <div class="row">
-<div class="medium-12 large-12">
-
-<div class="row dishes bgDishes">
-	<div class="medium-6 large-6 columns">
-		<div class="row small-up-2">
-			<div class="column down">
-				<img class="thumbnail" src={{menu}}>
-			</div>
-			<div class="column down">
-				<img class="thumbnail" src={{kitchen}}>
-			</div>
-			<div class="column">
-				<img class="thumbnail" src={{wine}}>
-			</div>
-			<div class="column">
-				<img class="thumbnail" src={{meat}}>
-			</div>
-
-
-		</div>
-	</div> 
-
-
-</div>
-<div class="medium-12 large-12"></div>
-
-</div>-->
-
 
 <div class="row dishes bgDishes">
 	<div class="medium-6 large-6 columns">
@@ -65,6 +36,39 @@
 		<img src={{captionDishes}}>
 	</h2>
 	<div class="column conteinerDishes" *ngFor="let dish of dishes">
+		<div class="card card-product-hover">
+			<img class="imgDish" src={{dish.imgURL}} /> 
+			<img src={{fonDish}}
+				alt="picture of admin dashboard" />
+			<div class="card-product-hover-details">
+				<h3 class="card-product-hover-title text-center nameDish">
+					{{dish.name}} <span class="card-product-hover-price text-left">${{dish.price}}</span>
+				</h3>
+				<h5 class="text-center"><i class="fa fa-calendar"></i>
+					{{dish.calendar1}} - {{dish.calendar2}} </h5>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- 
+http://foundation.zurb.com/building-blocks/blocks/card-product-hover.html
+
+<div class="row small-up-3 large-up-3 bgDishes">
+
+	<h2 class="captionDishes text-center">
+		<img src={{captionDishes}}>
+	</h2>
+	<div class="column conteinerDishes" *ngFor="let dish of dishes">
 		<div class="card-user-container">
 			<div class="card-user-avatar">
 				<img src={{dish.imgURL}} alt="" class="user-image">
@@ -80,9 +84,30 @@
 				<p>Price: {{dish.price}}$</p>
 			</div>
 		</div>
+		<div class="card card-product-hover">
+  <img src="https://zurb.com/blog/system/images/690/original/blue_bw_web.jpg?1354921642" alt="sweet foundation shirt" />
+  <img src="https://2.bp.blogspot.com/-luqexZwkPcY/VPamfRCxrmI/AAAAAAAAO8s/R6YaU81Zleo/s1600/foundationzurb-theme-DownloadNewThemes.jpg" alt="picture of admin dashboard" />
+  <div class="card-product-hover-icons">
+    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+    <a href="#"><i class="fa fa-star-o"></i></a>
+    <a href="#"><i class="fa fa-share-alt"></i></a>
+  </div>
+  <div class="card-product-hover-details">
+    <h3 class="card-product-hover-title">Legacy Foundation Tee</h3>
+    <span class="card-product-hover-price">$15.00</span>
+  </div>
+</div>
 
 	</div>
-</div>
+	
+	
+	
+	
+	
+	
+	
+	
+</div> -->
 
 
 

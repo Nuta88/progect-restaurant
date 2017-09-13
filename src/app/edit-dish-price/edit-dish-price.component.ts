@@ -14,7 +14,9 @@ export class EditDishPriceComponent implements OnInit {
 
   chooseDish = {};
 
-  modalWindowPrice(dish): any {this.chooseDish = dish;
+  modalWindowPrice(dish): any {
+      console.log(dish.id);
+      this.chooseDish = dish;
   }
 
   dishes: Dish[];

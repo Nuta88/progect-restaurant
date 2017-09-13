@@ -15,7 +15,8 @@ export class AddDishComponent implements OnInit {
     kitchen = "assets/images/kitchen.jpg";
     meat = "assets/images/images.jpg";
     wine = "assets/images/imagew1.jpg";
-    captionDishes = "assets/images/captionDishes.png";
+    captionDishes = "assets/images/captionDishes.png"; 
+    fonDish = "assets/images/fonDish.jpg"; 
 
 
     dishes: Dish[];

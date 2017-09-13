@@ -1,6 +1,6 @@
 export class Dish {
   id: string;
-  name: string;
+  name: number;
   imgURL: string;
   price: number;
   calendar1: string;
