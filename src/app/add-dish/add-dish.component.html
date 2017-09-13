@@ -37,9 +37,9 @@
 	</h2>
 	<div class="column conteinerDishes" *ngFor="let dish of dishes">
 		<div class="card card-product-hover">
-			<img class="imgDish" src={{dish.imgURL}} /> 
+			<img class="imgDish" src={{dish.imgURL}} alt="picture of dish"/> 
 			<img src={{fonDish}}
-				alt="picture of admin dashboard" />
+				alt="picture of logotip" />
 			<div class="card-product-hover-details">
 				<h3 class="card-product-hover-title text-center nameDish">
 					{{dish.name}} <span class="card-product-hover-price text-left">${{dish.price}}</span>

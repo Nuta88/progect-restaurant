@@ -1,8 +1,40 @@
- <app-modal-window-price [selectDish]="chooseDish" (onChanged)="onChanged($event)"></app-modal-window-price> 
 
+<app-modal-window-price [selectDish]="chooseDish"
+	(onChanged)="onChanged($event)"></app-modal-window-price>
 
 
 <div class="row small-up-3 large-up-3 dishes bgDishes">
+
+	<div class="column conteinerDishes" *ngFor="let dish of dishes">
+		<div class="card card-product-hover">
+			<img class="imgDish" src={{dish.imgURL}} alt="picture of dish" /> <img
+				src={{fonDish}} alt="picture of logotip" />
+			<div class="card-product-hover-icons">
+				<button type="button" class="btn btn-md btn-success"
+					data-toggle="modal" data-target="#myModal"
+					(click)="modalWindowPrice(dish)">Update</button>
+			</div>
+
+			<div class="card-product-hover-details">
+				<h3 class="card-product-hover-title text-center nameDish">
+					{{dish.name}} <span class="card-product-hover-price text-left">${{dish.price}}</span>
+				</h3>
+				<h5 class="text-center">
+					<i class="fa fa-calendar"></i> {{dish.calendar1}} -
+					{{dish.calendar2}}
+				</h5>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+<!-- <div class="row small-up-3 large-up-3 dishes bgDishes">
 
 	<h2 class="captionDishes text-center">
 		<img src={{captionDishes}}>
@@ -33,4 +65,4 @@
 		</div>
 
 	</div>
-</div>
+</div> -->

@@ -29,7 +29,7 @@ export class ModalWindowPriceComponent {
       "id": new FormControl(),
       "price": new FormControl("", [
         Validators.required,
-        Validators.pattern("[0-9]{1,3}(\\.[0-9][0-9]?)?")
+        Validators.pattern("[0-9]{0,3}(\.[0-9]{0,2}?)?")
       ]),
       "calendar1": new FormControl(),
       "calendar2": new FormControl()

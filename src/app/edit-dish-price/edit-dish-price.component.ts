@@ -11,6 +11,7 @@ import {Dish} from '../dish'
 })
 export class EditDishPriceComponent implements OnInit {
      captionDishes = "assets/images/captionDishes.png";
+     fonDish = "assets/images/fonDish.jpg"; 
 
   chooseDish = {};
 

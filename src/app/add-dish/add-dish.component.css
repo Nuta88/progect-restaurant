@@ -117,4 +117,6 @@
 .card-product-hover .imgDish {
 	height: 13rem;}
 	
-	.conteinerDishes:hover{filter: opacity(0.8);}
+	.card-product-hover:hover{filter: ;
+	box-shadow: 0 0 0.5px 2px rgba(49, 42, 39, 0.4);
+   }
