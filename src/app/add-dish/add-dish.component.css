@@ -20,10 +20,12 @@ div .nameForm {
 .captionDishes {
 	background-color: rgb(49, 42, 39);
 	color: white;
-	margin-bottom: 70px;	
+	margin-bottom: 70px;
 }
 
-.captionDishes img {vertical-align: top;}
+.captionDishes img {
+	vertical-align: top;
+}
 
 .bgDishes {
 	background-color: rgba(171, 130, 77, .6);
@@ -38,6 +40,7 @@ div .nameForm {
 	font-size: 1.4rem;
 	font-weight: bold;
 	margin-bottom: 0.2rem;
+	z-index: 20;
 }
 
 .card-product-hover {
@@ -64,9 +67,9 @@ div .nameForm {
 	font-size: #1779ba;
 }
 
-/* .card-product-hover .imgDish {
+ .card-product-hover .imgDish {
 	height: 16rem;
-} */
+} 
 
 .card-product-hover:hover {
 	filter:;

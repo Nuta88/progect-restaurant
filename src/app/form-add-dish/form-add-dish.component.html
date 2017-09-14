@@ -12,9 +12,10 @@
 					</span> <input type="text" maxlength="10" class="input-group-field"
 						formControlName="name" name="name" ngModel>
 				</div>
-				<div class="errMesseng errMessengName"
+				<div class="errMesseng errMessengName text-left"
 					*ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched">
-					 must consists of letters, not longer than 10 characters, without spaces</div>
+					must consists of letters, not longer than 10 characters, without
+					spaces</div>
 
 			</div>
 		</div>
@@ -50,7 +51,7 @@
 
 				<div class="errMesseng errMessengPrice"
 					*ngIf="myForm.controls['price'].invalid && myForm.controls['price'].touched">
-					must consists of numbers and 111.11 </div>
+					must consists of numbers and 111.11</div>
 
 			</div>
 		</div>
