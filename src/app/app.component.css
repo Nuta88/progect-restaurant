@@ -1,4 +1,4 @@
- .top-bar {
+.top-bar {
 	position: fixed;
 	width: 100%;
 	top: -1px;
@@ -32,103 +32,40 @@ a:hover, a:active, a:focus {
 	color: rgb(233, 205, 168);
 }
 
-
-
-
 .top-bar-right label {
 	display: none;
-	border: 1px solid #fff;
+
 	padding: 5px 10px;
 	cursor: pointer;
 	transition: 0.3s;
 }
 
-.top-bar-right label:hover {
-	color: #f00;
-	border: 1px solid #f00;
-}
+
 
 input[type="checkbox"] {
 	display: none;
 }
 
-@media screen and (max-width: 500px) {
-	.top-bar{text-align: center;}
+@media screen and (max-width: 776px) {
+	.imgCenter img {
+		display: none;
+	}
 	.top-bar-right label {
 		display: inline-block;
+		text-align: right;
 	}
 	.top-bar-right>.menu {
 		display: none;
-	}	
-	input[type="checkbox"]:checked ~ label+ul {
-		display: block;
-	}
-}
-
- 
- 
- 
- 
- 
- 
-/* nav {
-	background-color: rgb(35, 31, 32);
-	padding: 15px 10px;
-	color: #fff;
-	font-family: 'Segoe UI', sans-serif;
-	text-align: center;
-	position: fixed;
-	width: 100%;
-	top: -1px;
-	z-index: 100;
-}
-
-nav>ul {
-	padding: 0;
-}
-
-nav li {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-nav a {
-	color: #fff;
-	padding: 5px 10px;
-	text-decoration: none;
-	border: 1px solid transparent;
-	transition: 0.3s;
-}
-
-nav a:hover {
-	border: 1px solid #fff;
-}
-
-nav label {
-	display: none;
-	border: 1px solid #fff;
-	padding: 5px 10px;
-	cursor: pointer;
-	transition: 0.3s;
-}
-
-nav label:hover {
-	color: #f00;
-	border: 1px solid #f00;
-}
-
-input[type="checkbox"] {
-	display: none;
-}
-
-@media screen and (max-width: 500px) {
-	nav label {
-		display: inline-block;
-	}
-	nav>ul {
-		display: none;
+		
 	}
 	input[type="checkbox"]:checked ~ label+ul {
 		display: block;
 	}
-} */
+
+}
+
+@media screen and (max-width: 350px) {
+	.top-bar {
+		text-align: center;
+	}
+}

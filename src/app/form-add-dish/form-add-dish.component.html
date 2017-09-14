@@ -45,14 +45,13 @@
 			<div class="small-9 columns">
 				<div class="input-group">
 					<span class="input-group-label"> <i class="fa fa-dollar"></i>
-					</span> <input type="number" required name="price" ngModel
+					</span> <input type="text" name="price"
 						class="input-group-field" formControlName="price">
 				</div>
 
 				<div class="errMesseng errMessengPrice"
 					*ngIf="myForm.controls['price'].invalid && myForm.controls['price'].touched">
 					must consists of numbers and 111.11</div>
-
 			</div>
 		</div>
 

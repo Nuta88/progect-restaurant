@@ -8,6 +8,11 @@ h3 .nameDish {
 	color: rgb(49, 42, 39);
 }
 
+.thumbnail .imgDish {
+	height: 6.25rem;
+	width: 12.5rem;
+} 
+
 div .nameForm {
 	font-weight: bold;
 	color: rgb(49, 42, 39);

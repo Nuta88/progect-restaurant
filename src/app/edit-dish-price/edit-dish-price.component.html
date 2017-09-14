@@ -3,9 +3,10 @@
 	(onChanged)="onChanged($event)"></app-modal-window-price>
 
 
-<div class="row small-up-3 large-up-3 dishes bgDishes">
+<div class="row dishes bgDishes">
 
-	<div class="column conteinerDishes" *ngFor="let dish of dishes">
+	<div class="small-up-1 medium-up-2 large-up-3 ">
+			<div class="column conteinerDishes" *ngFor="let dish of dishes">
 		<div class="card card-product-hover">
 			<img class="imgDish" src={{dish.imgURL}} alt="picture of dish" /> <img
 				src={{fonDish}} alt="picture of logotip" />
@@ -32,39 +33,4 @@
 
 </div>
 
-
-
-
-
-<!-- <div class="row small-up-3 large-up-3 dishes bgDishes">
-
-	<h2 class="captionDishes text-center">
-		<img src={{captionDishes}}>
-	</h2>
-	<div class="column conteinerDishes"
-		*ngFor="let dish of dishes">
-		<div class="card-user-container">
-			<div class="card-user-avatar">
-				<img src={{dish.imgURL}} alt="" class="user-image">
-			</div>
-			<div class="card-user-social">
-				<p>
-					<i class="fa fa-calendar"></i> {{dish.calendar1}} -
-					{{dish.calendar2}}
-				</p>
-			</div>
-			<div class="card-user-bio">
-				<h4 class="nameDish noMargin">{{dish.name}}</h4>
-				<p>Price: {{dish.price}}$</p>
-			</div>
-			 <div class="card-user-button">
-    			<div class="text-center">
-					<button type="button" class="btn btn-md btn-success"
-						data-toggle="modal" data-target="#myModal"
-						(click)="modalWindowPrice(dish)">Update</button>
-				</div>
-  			</div>
-		</div>
-
-	</div>
-</div> -->
+</div>

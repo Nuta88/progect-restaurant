@@ -26,7 +26,7 @@ export class DishService {
       .catch(this.handleError);
   }
 
-  delete(id: string): Promise<void> {
+  delete(id: number): Promise<void> {
     const url = `${this.dishesUrl}/${id}`;
 
     return this.http.delete(url, {headers: this.headers})

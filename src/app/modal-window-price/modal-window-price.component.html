@@ -13,16 +13,11 @@
 
 
 					<input type="text" class="none" name="name"
-						[(ngModel)]="selectDish.name"
-						maxlength="10" name="name" formControlName="name">
-						 
-						<input class="none" type="number" required name="id"
-						[(ngModel)]="selectDish.id"
-						formControlName="id"> 
-						
-						<input class="none" type="text"
-						required name="imgURL"
-						[(ngModel)]="selectDish.imgURL"
+						[(ngModel)]="selectDish.name" maxlength="10" name="name"
+						formControlName="name"> <input class="none" type="number"
+						required name="id" [(ngModel)]="selectDish.id"
+						formControlName="id"> <input class="none" type="text"
+						required name="imgURL" [(ngModel)]="selectDish.imgURL"
 						formControlName="imgURL">
 
 
@@ -32,10 +27,10 @@
 						<div class="small-12 columns">
 							<div class="input-group">
 								<span class="input-group-label"> <i class="fa fa-dollar"></i>
-								</span> <input type="number" required name="price"
-									class="input-group-field name-input" value={{selectDish.price}}
-									formControlName="price">
-							</div>
+								</span> <input type="text" name="price" class="input-group-field"
+									formControlName="price" value={{selectDish.price}}>
+				</div>
+
 						</div>
 					</div>
 

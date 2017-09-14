@@ -19,8 +19,6 @@ export class FormAddDishComponent {
   selectDate(date) {
     let del = 6 - date.getDay();
     this.date2 = ((date.getDate() + del)+".0"+ (date.getMonth() + 1) + "." + date.getFullYear());
-    /**let list: number[] = [Number(date.getFullYear()), Number((date.getDate() + del)), Number("0" + (date.getMonth() + 1))];
-    this.date2 = new Date(list[0], list[2] - 1, list[1]);*/
   }
   en: any;
 
@@ -55,7 +53,7 @@ export class FormAddDishComponent {
       ]),
       "price": new FormControl("", [
         Validators.required,
-        Validators.pattern("^[1-9]")
+        Validators.pattern("[1-9][0-9]{0,4}(\\.[0-9]{0,2}?)?")
       ]),
       "calendar1": new FormControl("",
         Validators.required),

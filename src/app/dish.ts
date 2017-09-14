@@ -1,8 +1,8 @@
 export class Dish {
-  id: string;
-  name: number;
+  id: number;
+  name: string;
   imgURL: string;
-  price: number;
+  price: string;
   calendar1: string;
   calendar2: string;
 }
