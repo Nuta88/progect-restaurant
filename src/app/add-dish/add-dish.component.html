@@ -1,5 +1,8 @@
 
 <div class="row dishes bgDishes">
+		<h2 class="addDishImg text-center">
+			<img src={{addDishe}}> 
+		</h2>
 	<div class="medium-6 large-6 columns">
 		<div class="row small-up-2">
 			<div class="column down">
@@ -21,10 +24,6 @@
 
 
 	<div class="medium-6 large-6 columns">
-		<h3 class="nameForm">Add dish</h3>
-		<p>To add a new dish, please fill out all the fields in the form
-			below</p>
-
 		<app-form-add-dish (onChanged)="onChanged($event)"></app-form-add-dish>
 	</div>
 </div>

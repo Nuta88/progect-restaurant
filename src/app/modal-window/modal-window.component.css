@@ -16,7 +16,8 @@ input {
 }
 
 input:focus {
-	background-color: rgba(104, 91, 84, .8); color: white;
+	background-color: rgba(104, 91, 84, .8);
+	color: white;
 }
 
 .name-change-dishes {
@@ -29,16 +30,49 @@ input:focus {
 	font-size: 1.6rem;
 }
 
-.row{ margin-top: 0.7rem;}
+.row {
+	margin-top: 0.7rem;
+}
 
 .none {
 	display: none;
 }
-.button-modal {margin-bottom: 0.7rem; margin-top: 0.7rem;}
-.modal-footer{height: 4rem;}
 
+.button-modal {
+	margin-bottom: 0.7rem;
+	margin-top: 0.7rem;
+}
 
+.modal-footer {
+	height: 4rem;
+}
 
-        input.ng-touched.ng-invalid {border:solid red 2px;}
-        input.ng-touched.ng-valid {border:solid green 2px;}
-        .buttonSize { width:4.438rem; }
+input.ng-touched.ng-invalid {
+	border: solid red 2px;
+}
+
+input.ng-touched.ng-valid {
+	border: solid green 2px;
+}
+
+.buttonSize {
+	width: 4.438rem;
+}
+
+.errMesseng {
+	font-size: 0.9rem;
+	opacity: 0;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+}
+
+.sucMesseng {
+	font-size: 0.9rem;
+	color: green;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	right: 17px;
+}

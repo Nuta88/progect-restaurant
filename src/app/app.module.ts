@@ -23,26 +23,25 @@ import { RestaurantFooterComponent } from './restaurant-footer/restaurant-footer
 import { ModalWindowPriceComponent } from './modal-window-price/modal-window-price.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AddDishComponent,
-    EditDishComponent,
-    EditDishPriceComponent,
-    FormAddDishComponent,
-    ModalWindowComponent,
-    RestaurantFooterComponent,
-    ModalWindowPriceComponent,
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService),
-    AppRoutingModule, ReactiveFormsModule,
+    declarations: [
+        AppComponent,
+        AddDishComponent,
+        EditDishComponent,
+        EditDishPriceComponent,
+        FormAddDishComponent,
+        ModalWindowComponent,
+        RestaurantFooterComponent,
+        ModalWindowPriceComponent,
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        InMemoryWebApiModule.forRoot(InMemoryDataService),
+        AppRoutingModule, ReactiveFormsModule,
         BrowserAnimationsModule, CalendarModule
-  ],
-  providers: [
-    DishService],
-  bootstrap: [AppComponent]
+    ],
+    providers: [DishService],
+    bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

@@ -43,7 +43,7 @@ export class FormAddDishComponent {
   constructor() {
     this.myForm = new FormGroup({
 
-      "name": new FormControl("", [
+      "name": new FormControl("name dish", [
         Validators.required,
         Validators.pattern("^[a-zA-Z\s-]+$")
       ]),

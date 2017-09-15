@@ -2,6 +2,10 @@
 	(ngSubmit)="onSubmit(f.value); f.value='';myForm.reset();">
 
 	<div class="form-icons">
+		<label for="name" class="sucMesseng"
+			[hidden]="myForm.controls['name'].invalid">Successfully</label> <label
+			for="name" class="errMesseng"
+			*ngIf="myForm.controls['name'].invalid">Not successfully</label>
 		<div class="row">
 			<div class="small-3 columns">
 				<label class="middle">Name</label>
@@ -9,17 +13,16 @@
 			<div class="small-9 columns">
 				<div class="input-group">
 					<span class="input-group-label"> <i class="fa fa-coffee"></i>
-					</span> <input type="text" maxlength="10" class="input-group-field"
-						formControlName="name" name="name" ngModel>
+					</span> <input type="text" placeholder="up to 10 latin symbols"
+						maxlength="10" class="input-group-field" formControlName="name"
+						id="name" name="name" ngModel>
 				</div>
-				<div class="errMesseng errMessengName text-left"
-					*ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched">
-					must consists of letters, not longer than 10 characters, without
-					spaces</div>
-
 			</div>
 		</div>
-
+		<label for="imgURL" class="sucMesseng"
+			[hidden]="myForm.controls['imgURL'].invalid">Successfully</label> <label
+			for="imgURL" class="errMesseng"
+			*ngIf="myForm.controls['imgURL'].invalid">Not successfully</label>
 		<div class="row">
 			<div class="small-3 columns">
 				<label class="middle">URL</label>
@@ -28,16 +31,18 @@
 			<div class="small-9 columns">
 				<div class="input-group">
 					<span class="input-group-label"> <i class="fa fa-photo"></i>
-					</span> <input type="url" required name="imgURL" ngModel
-						class="input-group-field" maxlength="100" formControlName="imgURL">
+					</span> <input type="url"
+						placeholder="Begin 'https', up to 100 characters" name="imgURL"
+						id="imgURL" class="input-group-field" maxlength="100"
+						formControlName="imgURL">
 				</div>
-				<div class="errMesseng errMessengURL"
-					*ngIf="myForm.controls['imgURL'].invalid && myForm.controls['imgURL'].touched">
-					must begin with "https" and not longer than 100 characters</div>
 
 			</div>
 		</div>
-
+		<label for="price" class="sucMesseng"
+			[hidden]="myForm.controls['price'].invalid">Successfully</label> <label
+			for="price" class="errMesseng"
+			*ngIf="myForm.controls['price'].invalid">Not successfully</label>
 		<div class="row">
 			<div class="small-3 columns">
 				<label class="middle">Price</label>
@@ -45,13 +50,10 @@
 			<div class="small-9 columns">
 				<div class="input-group">
 					<span class="input-group-label"> <i class="fa fa-dollar"></i>
-					</span> <input type="text" name="price"
-						class="input-group-field" formControlName="price">
+					</span> <input type="text" placeholder="beginning not from 0, (111.11)"
+						id="price" name="price" class="input-group-field"
+						formControlName="price">
 				</div>
-
-				<div class="errMesseng errMessengPrice"
-					*ngIf="myForm.controls['price'].invalid && myForm.controls['price'].touched">
-					must consists of numbers and 111.11</div>
 			</div>
 		</div>
 
@@ -83,6 +85,11 @@
 
 			</div>
 		</div>
+
+
+
+
+
 
 		<div class="row">
 			<div class="small-12 text-center closeButton">

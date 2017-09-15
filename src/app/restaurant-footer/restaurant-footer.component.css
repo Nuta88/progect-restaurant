@@ -9,6 +9,14 @@
 	margin-bottom: 30px;
 }
 
+@media screen and (max-width: 766px) {
+	.hideNameVillula {
+		display: none;
+	}
+	
+	.nameVillula{text-align: center;}
+}
+
 @media screen and (max-width: 39.9375em) {
 	.marketing-site-footer .columns {
 		margin-bottom: 2rem;
@@ -42,4 +50,6 @@
 	line-height: 1.125rem;
 }
 
-.qmargin{margin-left: 3.5rem;}
+.qmargin {
+	margin-left: 3.5rem;
+}

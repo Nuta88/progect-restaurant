@@ -3,11 +3,6 @@
 	font-weight: bold;
 }
 
-h3 .nameDish {
-	font-weight: bold;
-	color: rgb(49, 42, 39);
-}
-
 .thumbnail .imgDish {
 	height: 6.25rem;
 	width: 12.5rem;
@@ -16,6 +11,7 @@ h3 .nameDish {
 div .nameForm {
 	font-weight: bold;
 	color: rgb(49, 42, 39);
+	text-align: center;
 }
 
 .conteinerDishes {
@@ -24,9 +20,10 @@ div .nameForm {
 
 .captionDishes {
 	background-color: rgb(49, 42, 39);
-	color: white;
-	margin-bottom: 70px;
+	margin-bottom: 62px;
 }
+
+.addDishImg{margin-bottom: 35px;}
 
 .captionDishes img {
 	vertical-align: top;
@@ -77,6 +74,5 @@ div .nameForm {
 } 
 
 .card-product-hover:hover {
-	filter:;
 	box-shadow: 0 0 0.5px 2px rgba(49, 42, 39, 0.4);
 }

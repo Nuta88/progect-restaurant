@@ -1,9 +1,4 @@
-.card-user-button {margin-bottom: 20px;}
-
-
-
-
-
+.addDishImg{margin-top: -18px;}
 
 .card-product-hover-icons {
   position: absolute;
@@ -23,14 +18,13 @@
           justify-content: flex-start;
 }
 
-
 .card-product-hover-icons button {
   margin: 2px;
   opacity: 0;
   -webkit-transform: translateY(50%);
       -ms-transform: translateY(50%);
           transform: translateY(50%);
-  transition: all 0.35s ease;
+  transition: all 0.35s ease; 
 }
 
 .card-product-hover:hover button,

@@ -5,13 +5,12 @@
 }
 
 .name-input {
-		color: rgb(233, 205, 168);
+	color: rgb(233, 205, 168);
 	font-size: 1.07rem;
 }
 
 input {
 	background-color: rgba(94, 82, 76, .8);
-
 	text-transform: capitalize;
 }
 
@@ -47,13 +46,32 @@ input:focus {
 	height: 4rem;
 }
 
-input.ng-touched.ng-invalid {
-	border: solid red 2px;
-}
-
 input.ng-touched.ng-valid {
 	border: solid green 2px;
 }
 
-input .colorInputCalendar {color: gray;}
-.buttonSize { width:4.438rem; }
+input .colorInputCalendar {
+	color: gray;
+}
+
+.buttonSize {
+	width: 4.438rem;
+}
+
+.errMesseng {
+	font-size: 0.9rem;
+	opacity: 0;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+}
+
+.sucMesseng {
+	font-size: 0.9rem;
+	color: green;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	right: 17px;
+}

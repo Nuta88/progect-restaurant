@@ -1,4 +1,5 @@
-<div id="myModal" class="modal fade" tabindex="-1" data-backdrop="static">
+<div id="myModal" class="modal fade" tabindex="-1"
+	data-backdrop="static">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -9,29 +10,30 @@
 			<div class="modal-body">
 				<form [formGroup]="myFormModal" #f="ngForm"
 					(ngSubmit)="onSubmit(f.value); f.value=''">
-
+					<label for="name" class="sucMesseng"
+						[hidden]="myFormModal.controls['name'].invalid">Successfully</label> <label
+						for="name" class="errMesseng"
+						*ngIf="myFormModal.controls['name'].invalid">Not successfully</label>
 					<div class="row">
 						<div class="small-3 columns">
 							<label class="name-input">Input new name</label>
 						</div>
 						<div class="small-9 columns">
 							<input type="text" maxlength="10" name="name"
-								class="form-control" 
-								value={{dishName.name}} formControlName="name">
+								class="form-control" value={{dishName.name}}
+								formControlName="name">
 						</div>
 
 					</div>
 
 					<input class="none" type="url" required name="imgURL"
 						[(ngModel)]="dishName.imgURL" placeholder={{dishName.imgURL}}
-						formControlName="imgURL"> 
-						
-						<input class="none" type="number" required
-						name="id" [(ngModel)]="dishName.id" placeholder={{dishName.id}} formControlName="id">
-
-
-					<input type="text" class="none" required name="price"
-						[(ngModel)]="dishName.price" placeholder={{dishName.price}} formControlName="price">
+						formControlName="imgURL"> <input class="none"
+						type="number" required name="id" [(ngModel)]="dishName.id"
+						placeholder={{dishName.id}} formControlName="id"> <input
+						type="text" class="none" required name="price"
+						[(ngModel)]="dishName.price" placeholder={{dishName.price}}
+						formControlName="price">
 
 
 
@@ -46,7 +48,8 @@
 
 					<div class="button-modal text-center">
 						<button type="submit" class="btn btn-md btn-success buttonSize"
-							[disabled]="myFormModal.invalid" (click)="addName(f.value); f.value=''">Update</button>
+							[disabled]="myFormModal.invalid"
+							(click)="addName(f.value); f.value=''">Update</button>
 						<button class="btn btn-md btn-danger buttonSize" type="button"
 							data-dismiss="modal" #closeBtn>Close</button>
 					</div>

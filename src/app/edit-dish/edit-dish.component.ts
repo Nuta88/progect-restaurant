@@ -10,7 +10,7 @@ import {Dish} from '../dish';
   styleUrls: ['./edit-dish.component.css', '../add-dish/add-dish.component.css']
 })
 export class EditDishComponent implements OnInit {
-     captionDishes = "assets/images/captionDishes.png";
+     editDishe = "assets/images/editDishe.png";
      fonDish = "assets/images/fonDish.jpg"; 
 
   name = {};

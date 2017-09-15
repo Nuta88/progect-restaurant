@@ -31,6 +31,7 @@ form .form-icons .fa {
 	color: white;
 	width: 1rem;
 }
+.form-icons {margin-top: -15px;}
 .closeButton {padding-left: 15px; padding-right: 15px;}
 .button.disabled,
 .button.disabled:hover,
@@ -43,10 +44,11 @@ form .form-icons .fa {
 .button:hover,
 .button:focus{background-color: rgb(35,31,32);}
 
-.errMesseng{position: absolute; z-index: 10098 !important; font-size: 0.9rem; color: red; }
- .errMessengName {top: 12.76rem;}
-.errMessengURL {top: 16.48rem;}
-.errMessengPrice{top: 20.13rem;} 
+
+
+.errMesseng{font-size: 0.9rem; opacity:0; text-align: right; margin: 0; padding: 0;}
+.sucMesseng{font-size: 0.9rem; color: green; text-align: right; margin: 0; padding: 0;}
+
 
 
 

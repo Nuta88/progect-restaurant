@@ -18,10 +18,11 @@
 						required name="id" [(ngModel)]="selectDish.id"
 						formControlName="id"> <input class="none" type="text"
 						required name="imgURL" [(ngModel)]="selectDish.imgURL"
-						formControlName="imgURL">
-
-
-
+						formControlName="imgURL"> <label for="name"
+						class="sucMesseng" [hidden]="myFormModalPrice.controls['price'].invalid">Successfully</label>
+					<label for="name" class="errMesseng"
+						*ngIf="myFormModalPrice.controls['price'].invalid">Not
+						successfully</label>
 					<div class="row">
 
 						<div class="small-12 columns">
@@ -29,7 +30,7 @@
 								<span class="input-group-label"> <i class="fa fa-dollar"></i>
 								</span> <input type="text" name="price" class="input-group-field"
 									formControlName="price" value={{selectDish.price}}>
-				</div>
+							</div>
 
 						</div>
 					</div>
