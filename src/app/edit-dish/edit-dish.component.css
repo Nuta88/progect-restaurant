@@ -1,3 +1,5 @@
+.dishes {min-height: 100vh;}
+
 .addDishImg{margin-top: -18px;}
 
 .card-product-hover-icons {
@@ -39,5 +41,4 @@
 
 .buttonSize { width:4.438rem; }
 button {display: block;}
-
 

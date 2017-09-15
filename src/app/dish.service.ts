@@ -59,7 +59,4 @@ export class DishService {
     return Promise.reject(error.message || error);
   }
 
-
-
-
 }

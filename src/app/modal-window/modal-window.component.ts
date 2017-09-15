@@ -37,8 +37,6 @@ export class ModalWindowComponent {
       addName(form){
       this.dishName.name = form.name;
     }
-  
-
 
     @Output() onChanged = new EventEmitter<any>();
     onSubmit(form) {
@@ -46,3 +44,4 @@ export class ModalWindowComponent {
         this.closeModal();
     }
 }
+

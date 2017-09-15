@@ -19,5 +19,4 @@ export class RestaurantFooterComponent implements OnInit {
 
     ngOnInit() {
     }
-
 }

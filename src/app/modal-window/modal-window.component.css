@@ -47,11 +47,7 @@ input:focus {
 	height: 4rem;
 }
 
-input.ng-touched.ng-invalid {
-	border: solid red 2px;
-}
-
-input.ng-touched.ng-valid {
+input.ng-valid {
 	border: solid green 2px;
 }
 
@@ -76,3 +72,4 @@ input.ng-touched.ng-valid {
 	position: relative;
 	right: 17px;
 }
+

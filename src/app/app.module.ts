@@ -45,3 +45,4 @@ import { ModalWindowPriceComponent } from './modal-window-price/modal-window-pri
     bootstrap: [AppComponent]
 })
 export class AppModule { }
+

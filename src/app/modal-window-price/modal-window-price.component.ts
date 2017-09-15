@@ -67,7 +67,6 @@ export class ModalWindowPriceComponent {
     this.focuc = new Date();
     this.focuc.setDate(today.getDate())
     this.selectDish.calendar1 = ((this.focuc.getDate()) + ".0" + (this.focuc.getMonth() + 1) + "." + this.focuc.getFullYear());
-    console.log(this.selectDish.calendar1)
   }
 
 
@@ -86,5 +85,7 @@ export class ModalWindowPriceComponent {
     this.closeModal();
   }
 
-
 }
+
+
+
