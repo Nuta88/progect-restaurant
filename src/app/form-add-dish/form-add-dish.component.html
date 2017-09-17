@@ -1,5 +1,5 @@
 <form [formGroup]="myForm" #f="ngForm"
-	(ngSubmit)="onSubmit(f.value); f.value='';myForm.reset();">
+	(ngSubmit)="onSubmit(f.value); f.value='';myForm.reset();" class="myForm">
 
 	<div class="form-icons">
 		<label for="name" class="sucMesseng"
@@ -7,10 +7,10 @@
 			for="name" class="errMesseng"
 			*ngIf="myForm.controls['name'].invalid">Not successfully</label>
 		<div class="row">
-			<div class="small-3 columns">
+			<div class="small-3 medium-3 large-2 columns">
 				<label class="middle">Name</label>
 			</div>
-			<div class="small-9 columns">
+			<div class="small-9 medium-9 large-10 columns">
 				<div class="input-group">
 					<span class="input-group-label"> <i class="fa fa-coffee"></i>
 					</span> <input type="text" placeholder="up to 10 latin symbols"
@@ -24,11 +24,11 @@
 			for="imgURL" class="errMesseng"
 			*ngIf="myForm.controls['imgURL'].invalid">Not successfully</label>
 		<div class="row">
-			<div class="small-3 columns">
+			<div class="small-3 medium-3 large-2 columns">
 				<label class="middle">URL</label>
 			</div>
 
-			<div class="small-9 columns">
+			<div class="small-9 medium-9 large-10 columns">
 				<div class="input-group">
 					<span class="input-group-label"> <i class="fa fa-photo"></i>
 					</span> <input type="url"
@@ -44,10 +44,10 @@
 			for="price" class="errMesseng"
 			*ngIf="myForm.controls['price'].invalid">Not successfully</label>
 		<div class="row">
-			<div class="small-3 columns">
+			<div class="small-3 medium-3 large-2 columns">
 				<label class="middle">Price</label>
 			</div>
-			<div class="small-9 columns">
+			<div class="small-9 medium-9 large-10  columns">
 				<div class="input-group">
 					<span class="input-group-label"> <i class="fa fa-dollar"></i>
 					</span> <input type="text" placeholder="beginning not from 0, (111.11)"

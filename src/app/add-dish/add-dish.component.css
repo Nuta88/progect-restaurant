@@ -1,36 +1,30 @@
+.image {
+	background-attachment: fixed; background-size: cover;
+}
+
 .nameDish::first-letter {
 	text-transform: capitalize;
 	font-weight: bold;
 }
-
+.down{margin-bottom: 25px;}
 .thumbnail .imgDish {
 	height: 6.25rem;
 	width: 12.5rem;
 } 
 
-div .nameForm {
-	font-weight: bold;
-	color: rgb(49, 42, 39);
-	text-align: center;
-}
-
 .conteinerDishes {
 	margin-bottom: 10px;
 }
 
-.captionDishes {
+ .captionDishes {
 	background-color: rgb(49, 42, 39);
 	margin-bottom: 62px;
-}
+} 
 
 .addDishImg{margin-bottom: 35px;}
 
-.captionDishes img {
-	vertical-align: top;
-}
-
 .bgDishes {
-	background-color: rgba(171, 130, 77, .6);
+	background-color: rgba(178, 139, 96, .93);
 }
 
 .dishes {

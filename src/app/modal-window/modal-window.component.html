@@ -4,7 +4,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h4 class="modal-title text-center">
-					Update name: <span class="name-change-dishes">{{dishName.name}}</span>
+					Update name: <span class="name-change-dishes">{{dishSelected.name}}</span>
 				</h4>
 			</div>
 			<div class="modal-body">
@@ -20,30 +20,30 @@
 						</div>
 						<div class="small-9 columns">
 							<input type="text" maxlength="10" name="name"
-								class="form-control" value={{dishName.name}}
+								class="form-control input" value={{dishSelected.name}}
 								formControlName="name">
 						</div>
 
 					</div>
 
 					<input class="none" type="url" required name="imgURL"
-						[(ngModel)]="dishName.imgURL" placeholder={{dishName.imgURL}}
+						[(ngModel)]="dishSelected.imgURL" placeholder={{dishSelected.imgURL}}
 						formControlName="imgURL"> <input class="none"
-						type="number" required name="id" [(ngModel)]="dishName.id"
-						placeholder={{dishName.id}} formControlName="id"> <input
+						type="number" required name="id" [(ngModel)]="dishSelected.id"
+						placeholder={{dishSelected.id}} formControlName="id"> <input
 						type="text" class="none" required name="price"
-						[(ngModel)]="dishName.price" placeholder={{dishName.price}}
+						[(ngModel)]="dishSelected.price" placeholder={{dishSelected.price}}
 						formControlName="price">
 
 
 
 
-					<p-calendar [(ngModel)]="dishName.calendar1" name="calendar1"
+					<p-calendar [(ngModel)]="dishSelected.calendar1" name="calendar1"
 						class="none" dateFormat="dd.mm.yy" dataType="string"
 						placeholder="Date from" formControlName="calendar1"></p-calendar>
 
 					<input type="text" id="calendar2" class="none" name="calendar2"
-						[(ngModel)]="dishName.calendar2" formControlName="calendar2">
+						[(ngModel)]="dishSelected.calendar2" formControlName="calendar2">
 
 
 					<div class="button-modal text-center">

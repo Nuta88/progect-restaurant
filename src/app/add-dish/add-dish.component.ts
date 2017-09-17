@@ -18,6 +18,9 @@ export class AddDishComponent implements OnInit {
     captionDishes = "assets/images/captionDishes.png";
     addDishe = "assets/images/addDishe.png";
     fonDish = "assets/images/fonDish.jpg";
+    background = {
+    link: "assets/images/background.png"
+  }
 
 
     dishes: Dish[];
@@ -33,5 +36,4 @@ export class AddDishComponent implements OnInit {
     ngOnInit(): void {
         this.dishService.getDishes().then(dishes => this.dishes = dishes);
     }
-
 }

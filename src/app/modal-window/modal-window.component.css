@@ -9,13 +9,13 @@
 	font-size: 1.07rem;
 }
 
-input {
+.input {
 	background-color: rgba(94, 82, 76, .8);
 	color: rgb(233, 205, 168);;
 	text-transform: capitalize;
 }
 
-input:focus {
+.input:focus {
 	background-color: rgba(104, 91, 84, .8);
 	color: white;
 }
@@ -47,7 +47,7 @@ input:focus {
 	height: 4rem;
 }
 
-input.ng-valid {
+.input.ng-valid {
 	border: solid green 2px;
 }
 
@@ -72,4 +72,3 @@ input.ng-valid {
 	position: relative;
 	right: 17px;
 }
-

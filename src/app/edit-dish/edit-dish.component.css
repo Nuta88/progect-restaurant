@@ -1,44 +1,42 @@
-.dishes {min-height: 100vh;}
+.dishes {
+	min-height: 100vh;
+}
 
-.addDishImg{margin-top: -18px;}
+.addDishImg {
+	margin-top: -18px;
+}
 
 .card-product-hover-icons {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0.5rem;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0.5rem;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
 .card-product-hover-icons button {
-  margin: 2px;
-  opacity: 0;
-  -webkit-transform: translateY(50%);
-      -ms-transform: translateY(50%);
-          transform: translateY(50%);
-  transition: all 0.35s ease; 
+	margin: 2px;
+	opacity: 0;
+	transform: translateY(50%);
+	transition: all 0.35s ease;
 }
 
-.card-product-hover:hover button,
-.card-product-hover.hover button {
-  transition: all 0.35s ease;
-  opacity: 1;
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
+.card-product-hover:hover button, .card-product-hover.hover button {
+	transition: all 0.35s ease;
+	opacity: 1;
+	transform: translateX(0);
 }
 
+.buttonSize {
+	width: 4.438rem;
+}
 
-.buttonSize { width:4.438rem; }
-button {display: block;}
-
+button {
+	display: block;
+}

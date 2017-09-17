@@ -34,13 +34,10 @@ a:hover, a:active, a:focus {
 
 .top-bar-right label {
 	display: none;
-
 	padding: 5px 10px;
 	cursor: pointer;
 	transition: 0.3s;
 }
-
-
 
 input[type="checkbox"] {
 	display: none;
@@ -50,14 +47,18 @@ input[type="checkbox"] {
 	.imgCenter img {
 		display: none;
 	}
-	.top-bar{text-align: center;}
+	.top-bar {
+		text-align: center;
+	}
 }
 
 @media screen and (max-width: 700px) {
 	.nameRestaurant img {
 		display: none;
 	}
-	.top-bar{text-align: center;}
+	.top-bar {
+		text-align: center;
+	}
 }
 
 @media screen and (max-width: 340px) {
@@ -66,13 +67,11 @@ input[type="checkbox"] {
 	}
 	.top-bar-right>.menu {
 		display: none;
-		
 	}
-		input[type="checkbox"]:checked ~ label {
+	input[type="checkbox"]:checked ~ label {
 		position: static;
 	}
 	input[type="checkbox"]:checked ~ label+ul {
 		display: block;
 	}
 }
-

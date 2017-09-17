@@ -1,14 +1,15 @@
-<app-modal-window [dishName]="name" (onChanged)="onChanged($event)"></app-modal-window>
+<div class="image" [ngStyle]="{'background-image':'url(' + background.link + ')'}">
+<app-modal-window [dishSelected]="name" (onChanged)="onChanged($event)"></app-modal-window>
 
 <div class="row dishes bgDishes">
-<h2 class="addDishImg text-center">
-			<img src={{editDishe}}> 
-		</h2>
+<!-- 	<h2 class="addDishImg text-center">
+		<img src={{editDishe}}>
+	</h2> -->
 	<div class="small-up-1 medium-up-2 large-up-3 ">
 		<div class="column conteinerDishes" *ngFor="let dish of dishes">
 			<div class="card card-product-hover">
-				<img class="imgDish" src={{dish.imgURL}} alt="picture of dish" /> <img
-					src={{fonDish}} alt="picture of logotip" />
+				<img class="imgDish" src={{dish.imgURL}} alt="picture of dish" />
+				<img src={{fonDish}} alt="picture of logotip" />
 				<div class="card-product-hover-icons">
 					<div>
 						<button type="button" class="btn btn-md btn-success buttonSize"
@@ -34,5 +35,7 @@
 
 
 	</div>
+
+</div>
 
 </div>

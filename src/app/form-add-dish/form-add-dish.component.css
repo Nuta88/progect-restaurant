@@ -1,5 +1,8 @@
 .nameCalendar {
 	margin-bottom: 10px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .nameDish::first-letter {
@@ -14,8 +17,16 @@ input.ng-touched.ng-valid {
 	border: solid green 2px;
 }
 
-form {
+.myForm {
 	z-index: 1;
+}
+
+.middle {
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	vertical-align: middle; 
+	text-align: right;
 }
 
 form .form-icons {
@@ -23,26 +34,45 @@ form .form-icons {
 }
 
 form .form-icons .input-group-label {
-	background-color: rgb(35,31,32);
-	border-color: rgb(35,31,32);
+	background-color: rgb(35, 31, 32);
+	border-color: rgb(35, 31, 32);
 }
 
 form .form-icons .fa {
 	color: white;
 	width: 1rem;
 }
-.form-icons {margin-top: -15px;}
-.closeButton {padding-left: 15px; padding-right: 15px;}
-.button.disabled,
-.button.disabled:hover,
-.button.disabled:focus,
-.button[disabled],
-.button[disabled]:hover,
-.button[disabled]:focus{background-color: rgb(35,31,32);}
 
-.button,
-.button:hover,
-.button:focus{background-color: rgb(35,31,32);}
+.form-icons {
+	margin-top: -25px;
+}
 
-.errMesseng{font-size: 0.9rem; opacity:0; text-align: right; margin: 0; padding: 0;}
-.sucMesseng{font-size: 0.9rem; color: green; text-align: right; margin: 0; padding: 0;}
+.closeButton {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.button.disabled, .button.disabled:hover, .button.disabled:focus,
+	.button[disabled], .button[disabled]:hover, .button[disabled]:focus {
+	background-color: rgb(35, 31, 32);
+}
+
+.button, .button:hover, .button:focus {
+	background-color: rgb(35, 31, 32);
+}
+
+.errMesseng {
+	font-size: 0.9rem;
+	opacity: 0;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+}
+
+.sucMesseng {
+	font-size: 0.9rem;
+	color: green;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+}

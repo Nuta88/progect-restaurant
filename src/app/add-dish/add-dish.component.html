@@ -1,8 +1,6 @@
 
+<div class="image" [ngStyle]="{'background-image':'url(' + background.link + ')'}">
 <div class="row dishes bgDishes">
-		<h2 class="addDishImg text-center">
-			<img src={{addDishe}}> 
-		</h2>
 	<div class="medium-6 large-6 columns">
 		<div class="row small-up-2">
 			<div class="column down">
@@ -26,15 +24,13 @@
 	<div class="medium-6 large-6 columns">
 		<app-form-add-dish (onChanged)="onChanged($event)"></app-form-add-dish>
 	</div>
-</div>
+ </div> 
 
 
 
-<div class="row bgDishes">
-
+ <div class="row bgDishes">
 	<div class="small-up-1 medium-up-2 large-up-3">
-
-		<h2 class="captionDishes text-center">
+	<h2 class="captionDishes text-center">
 			<img src={{captionDishes}}>
 		</h2>
 		<div class="column conteinerDishes" *ngFor="let dish of dishes">
@@ -56,5 +52,7 @@
 
 	</div>
 
-</div>
+</div> 
+
+ </div>
 

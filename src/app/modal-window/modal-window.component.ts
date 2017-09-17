@@ -10,7 +10,7 @@ import {Dish} from '../dish';
 export class ModalWindowComponent {
     myFormModal: FormGroup;
 
-    @Input() dishName: Dish;
+    @Input() dishSelected: Dish;
 
     @ViewChild('closeBtn') closeBtn: ElementRef;
 
@@ -35,7 +35,7 @@ export class ModalWindowComponent {
     }
   
       addName(form){
-      this.dishName.name = form.name;
+      this.dishSelected.name = form.name;
     }
 
     @Output() onChanged = new EventEmitter<any>();
