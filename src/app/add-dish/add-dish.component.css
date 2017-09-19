@@ -6,7 +6,7 @@
 	text-transform: capitalize;
 	font-weight: bold;
 }
-.down{margin-bottom: 25px;}
+.down{margin-bottom: 23px;}
 .thumbnail .imgDish {
 	height: 6.25rem;
 	width: 12.5rem;
@@ -25,6 +25,7 @@
 
 .bgDishes {
 	background-color: rgba(178, 139, 96, .93);
+	width: 90%;
 }
 
 .dishes {
@@ -70,3 +71,11 @@
 .card-product-hover:hover {
 	box-shadow: 0 0 0.5px 2px rgba(49, 42, 39, 0.4);
 }
+
+@media screen and (max-width: 1074px) {
+.down{margin-bottom: 10px;}
+	}
+
+@media screen and (max-width: 637px) {
+.margBottImg{margin-bottom: 20px;}
+	}

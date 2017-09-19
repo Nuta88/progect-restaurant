@@ -21,8 +21,7 @@ export class AddDishComponent implements OnInit {
     background = {
     link: "assets/images/background.png"
   }
-
-
+  
     dishes: Dish[];
     constructor(private dishService: DishService) { }
 

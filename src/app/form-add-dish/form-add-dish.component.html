@@ -2,11 +2,11 @@
 	(ngSubmit)="onSubmit(f.value); f.value='';myForm.reset();" class="myForm">
 
 	<div class="form-icons">
-		<label for="name" class="sucMesseng"
+		<div class="row">
+			<label for="name" class="sucMesseng"
 			[hidden]="myForm.controls['name'].invalid">Successfully</label> <label
 			for="name" class="errMesseng"
 			*ngIf="myForm.controls['name'].invalid">Not successfully</label>
-		<div class="row">
 			<div class="small-3 medium-3 large-2 columns">
 				<label class="middle">Name</label>
 			</div>
@@ -19,11 +19,12 @@
 				</div>
 			</div>
 		</div>
-		<label for="imgURL" class="sucMesseng"
+		
+		<div class="row upInput">
+			<label for="imgURL" class="sucMesseng"
 			[hidden]="myForm.controls['imgURL'].invalid">Successfully</label> <label
 			for="imgURL" class="errMesseng"
 			*ngIf="myForm.controls['imgURL'].invalid">Not successfully</label>
-		<div class="row">
 			<div class="small-3 medium-3 large-2 columns">
 				<label class="middle">URL</label>
 			</div>
@@ -39,11 +40,11 @@
 
 			</div>
 		</div>
-		<label for="price" class="sucMesseng"
+		<div class="row upInput">
+			<label for="price" class="sucMesseng"
 			[hidden]="myForm.controls['price'].invalid">Successfully</label> <label
 			for="price" class="errMesseng"
 			*ngIf="myForm.controls['price'].invalid">Not successfully</label>
-		<div class="row">
 			<div class="small-3 medium-3 large-2 columns">
 				<label class="middle">Price</label>
 			</div>
